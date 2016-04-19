@@ -1,0 +1,22 @@
+<div ng-controller="sideNavBarController as ul">
+<md-sidenav class="site-sidenav md-sidenav-right md-whiteframe-z2"
+	md-component-id="right"> 
+	<md-toolbar
+	class="md-whiteframe-z1"> <!-- 	<h1>Users</h1> --> 
+		<md-button
+				style="background-color: teal;" class="md-fab" aria-label="Close Menu"
+		ng-click="ul.toggleList()"> 
+			<md-icon
+			md-svg-src="assets/icons/ic_arrow_forward_white_24px.svg">
+			</md-icon> 
+		</md-button> 
+	</md-toolbar>
+	<md-list> 
+		<md-list-item ng-repeat="it in ul.users">
+			<md-button ng-click="ul.selectUser(it)"
+				ng-class="{'selected' : it === ul.selected }"> <!-- <md-icon
+					md-svg-icon="{{it.icon}}" class="avatar"></md-icon> --> {{it.title}} </md-button>
+			</md-list-item> 
+	</md-list> 
+</md-sidenav>
+</div>

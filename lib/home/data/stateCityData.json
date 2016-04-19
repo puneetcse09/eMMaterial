@@ -1,0 +1,16 @@
+[ {
+  "name" : "Ghaziabad",
+  "supportedBoard" : [ "UP" ]
+}, {
+  "name" : "Allahabad",
+  "supportedBoard" : [ "CBSE" ]
+}, {
+  "name" : "Hyderabad/Secunderabad",
+  "supportedBoard" : [ "CBSE" ]
+}, {
+  "name" : "Silchar",
+  "supportedBoard" : [ "UP" ]
+}, {
+  "name" : "Gandhinagar",
+  "supportedBoard" : [ "ICSE" ]
+} ]

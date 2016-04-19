@@ -1,0 +1,12 @@
+[
+		{
+            "state":"login",
+            "name": "Login",
+            "icon": "person_black"
+        },
+        {
+            "state": "settings",
+            "name":"Settings",
+            "icon":"settings_black"
+        }
+]

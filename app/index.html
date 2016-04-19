@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>EDUKONE - Your school admission made easy.</title>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="viewport"
+	content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+<link rel='icon' type='image/x-icon' href="assets/favicon.ico" />
+
+<link rel="stylesheet"
+	href="./bower_components/angular-material/angular-material.min.css" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<link rel="stylesheet" href="assets/css/app.css" />
+<link rel='stylesheet' href="assets/css/fonts.css">
+<!-- <link rel='stylesheet'
+	href="assets/css/notificationCss/notification.css">
+<link rel='stylesheet'
+	href="assets/css/notificationCss/notification.min.css"> -->
+</head>
+
+<body ng-app="starterApp" layout="row">
+	<div flex layout="column" tabIndex="-1" role="main">
+		<!-- ADD BUTTON - START -->
+		<!--
+		<md-button class="md-fab md-fab-bottom-right" aria-label="Add"
+			ng-click="ul.showAdd($event)"> <md-icon
+			md-svg-src="assets/icons/ic_add_white_48px.svg"></md-icon> </md-button> 
+			 -->
+		<!-- ADD BUTTON - END -->
+		<div ng-include="'src/navbar/view/navBar.html'"></div>
+		<!-- <div notifications="bottom right"></div> -->
+		<div id="content" ui-view flex></div>
+		
+	</div>
+	<div ng-include="'src/sidenavbar/view/sideNavBar.html'"></div>
+
+	<!-- <script src="./bower_components/jquery/jquery.js"></script>
+	<script src="./bower_components/jquery/jquery.min.js"></script> -->
+	<script src="./bower_components/angular/angular.min.js"></script>
+	<script src="./bower_components/angular-animate/angular-animate.min.js"></script>
+	<script src="./bower_components/angular-aria/angular-aria.min.js"></script>
+
+
+	<script type="text/javascript"
+		src="./bower_components/angular-material/angular-material.min.js"></script>
+	<script
+		src="./bower_components/angular-material-icons/angular-material-icons.min.js"></script>
+	<script
+		src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script> 
+ 	<script src="./vendor/ngAutocomplete.js"></script> 
+	<script src="./src/app.js"></script>
+	<script src="./src/iconProvider.js"></script>
+
+	<script src="./src/sidenavbar/SideNavBar.js"></script>
+	<script src="./src/sidenavbar/SideNavBarController.js"></script>
+	<script src="./src/sidenavbar/SideNavBarService.js"></script>
+
+	<script src="./src/dashboard/Dashboard.js"></script>
+	<script src="./src/dashboard/DashboardController.js"></script>
+	<script src="./src/dashboard/DashboardService.js"></script>
+
+	<script src="./src/users/Users.js"></script>
+	<script src="./src/users/UserController.js"></script>
+	<script src="./src/users/UserService.js"></script>
+
+	<script src="./src/navbar/NavBar.js"></script>
+	<script src="./src/navbar/NavBarController.js"></script>
+	<script src="./src/navbar/NavBarService.js"></script>
+
+	<script src="./src/home/Home.js"></script>
+	<script src="./src/home/HomeController.js"></script>
+	<script src="./src/home/HomeService.js"></script>
+	
+	<script src="./src/homeSummary/HomeSummary.js"></script>
+	<script src="./src/homeSummary/HomeSummaryCtrl.js"></script>
+	<script src="./src/homeSummary/HomeSummaryService.js"></script>
+
+	<script src="./src/registerSchool/registerSchool.js"></script>
+	<script src="./src/registerSchool/registerSchoolCtrl.js"></script>
+	<script src="./src/registerSchool/registerSchoolService.js"></script>
+	
+	<script src="./src/registerSelf/registerSelf.js"></script>
+	<script src="./src/registerSelf/registerSelfCtrl.js"></script>
+	<script src="./src/registerSelf/registerSelfService.js"></script>
+	
+	<script src="./src/utils/notification.js"></script><!--  -->
+</body>
+</html>

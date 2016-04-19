@@ -1,0 +1,25 @@
+{
+  "name": "ADM",
+  "description": "Admission Front",
+  "version": "1.0-SNAPSHOT",
+  "dependencies": {
+    "angular": "^1.4.8",
+    "angular-animate": "^1.4.8",
+    "angular-aria": "^1.4.8",
+    "angular-material": "^1.0.0",
+    "json3": "~3.2.6",
+    "es5-shim": "~2.1.0",
+    "jquery": "~1.10.2",
+    "bootstrap": "~3.0.3",
+    "font-awesome": "4.2.0",
+    "angular-ui-router": "0.2.10",
+    "moment": "~2.8.4",
+    "angular-bootstrap": "latest",
+    "ag-grid": "~2.3.5",
+    "angular-material-icons": "~0.6.0",
+    "sweetalert": "*"
+  },
+  "devDependencies": {
+   "angular-material": "https://github.com/angular/bower-material.git#master"
+   }
+}
