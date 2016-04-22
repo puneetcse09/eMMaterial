@@ -1,37 +1,30 @@
 <div ng-controller="navBarController as nv" id="header"
 ng-init="nv.load()">
   <md-toolbar layout="row" class="md-whiteframe-z1">
-      <h1 style="color: white; font-weight: bold;" class="cursor-pointer"><span ui-sref="home"> EDUKONE </span></h1>
-   <!--  <md-button 
-    	ng-click="nv.openLoginPanel($event)" aria-label="Login"> 
-    		<md-icon
-				md-svg-src="assets/icons/ic_person_white_24px.svg">
-			</md-icon>  
-	</md-button>  -->
-  <!----> 
-  
-  <md-button class="menu"
+      <h1 style="color: white; font-weight: bold;" class="cursor-pointer"><span> eM </span></h1>
+
+<!--   <md-button class="menu"
 		ng-click="nv.toggleList()" aria-label="Show User List"> <md-icon
-		md-svg-icon="menu"></md-icon> </md-button>  
+		md-svg-icon="menu"></md-icon> </md-button>  --> 
     
-      <div layout="column" layout-align="right right">
+     <!--  <div layout="column" layout-align="right right">
         <md-menu md-position-mode="target-right target" >
           <md-button aria-label="Open Menu" ng-click="$mdOpenMenu($event)">
             <md-icon md-svg-icon="person_white"></md-icon>
           </md-button>
           <md-menu-content width="3" >
             <md-menu-item ng-repeat="item in menuData">
-              <!-- -->
+             
                <md-button ng-click="nv.openLoginPanel($event)">
                  <div layout="row" flex>
                     <p flex>{{item.name}}</p>
-                    	<!-- <md-icon md-menu-align-target md-svg-icon="{{item.icon}}"></md-icon>  -->
+                    	<md-icon md-menu-align-target md-svg-icon="{{item.icon}}"></md-icon> 
                   </div> 
               </md-button>
             </md-menu-item>
           </md-menu-content>
         </md-menu>
-      </div>
+      </div> -->
  </md-toolbar>
 	
 

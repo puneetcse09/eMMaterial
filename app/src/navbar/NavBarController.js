@@ -3,7 +3,7 @@
   angular
        .module('navBar')
        .controller('navBarController', [
-          'navBarService', '$mdSidenav', '$mdBottomSheet', '$log', '$q','$scope','$notification', '$mdDialog',
+          'navBarService', '$mdSidenav', '$mdBottomSheet', '$log', '$q','$scope','$mdDialog',
           navBarController
        ]);
   
@@ -14,7 +14,7 @@
    * @param navBarService
    * @constructor
    */
-  function navBarController( navBarService, $mdSidenav, $mdBottomSheet, $log, $q, $scope, $notification, $mdDialog) {
+  function navBarController( navBarService, $mdSidenav, $mdBottomSheet, $log, $q, $scope, $mdDialog) {
     var self = this;
 
    self.toggleList   = toggleUsersList;
