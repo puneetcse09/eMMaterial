@@ -1,8 +1,7 @@
 var myapp = angular.module('starterApp', 
 		[ 'ng', 'ngMaterial', 'ngMdIcons', "ngAnimate", "ngAria",'ui.router',
 		  'notifications', 'sideNavBar','navBar',
-		  'users' , 'dashboard','home' ,'homeSummary',
-		  'registerSchool','registerSelf', 'ngAutocomplete'])
+		   'ngAutocomplete'])
 		  .run(
 				  ['$rootScope', '$state', '$stateParams',
 				   function ($rootScope,   $state,   $stateParams) {
@@ -32,7 +31,7 @@ var myapp = angular.module('starterApp',
 					  
 					  $mdThemingProvider.alwaysWatchTheme(true);
 					  $mdThemingProvider.theme('default')
-                          .primaryPalette('green')
+                          .primaryPalette('blue')
                           .accentPalette('red');
 //                    red, pink, purple, deep-purple, indigo, blue, light-blue, 
 //                    cyan, teal, green, light-green, lime, yellow, amber, orange, 

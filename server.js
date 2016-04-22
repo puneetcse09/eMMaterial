@@ -31,11 +31,8 @@ app.get('/',Utils.ensureAuthenticated, function(req,res){
 app.get('/index',Utils.ensureAuthenticated, function(req,res){
     res.render('index');
 });
-require('./lib/home/HomeServer.js')(app,Utils);
+
 require('./lib/navbar/navbarServer.js')(app,Utils);
-require('./lib/schoolDetails/schoolDetailsServer.js')(app,Utils);
-require('./lib/captureApplication/captureApplicationServer.js')(app,Utils);
-require('./lib/registerSelf/registerSelfServer.js')(app,Utils);
 //require('./lib/login/controllers/loginCtrl.js')(app,Utils);
 //require('./lib/manageUsers/controllers/userProfileServer.js')(app,Utils);
 
