@@ -31,7 +31,12 @@
    	$log.debug("Inside load of navBarController");
    	getMenuList();
    }
-   
+   $scope.gotoSchoolSignup = function (data) {
+		$log.debug("School Sign Up");
+   	$state.go('schoolSignup');
+   	
+   };
+    
     // *********************************
     // Internal methods
     // *********************************

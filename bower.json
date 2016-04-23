@@ -16,9 +16,8 @@
     "moment": "~2.8.4",
     "angular-bootstrap": "latest",
     "ag-grid": "~2.3.5",
-    "angular-material-icons": "~0.6.0",
-    "sweetalert": "*"
-  },
+    "angular-material-icons": "~0.6.0"
+     },
   "devDependencies": {
    "angular-material": "https://github.com/angular/bower-material.git#master"
    }

@@ -1,8 +1,22 @@
 <div ng-controller="navBarController as nv" id="header"
 ng-init="nv.load()">
   <md-toolbar layout="row" class="md-whiteframe-z1">
-      <h1 style="color: white; font-weight: bold;" class="cursor-pointer"><span> eM </span></h1>
-
+      <!-- h1 style="color: white; font-weight: bold;" class="cursor-pointer"><span> eM </span></h1>-->
+	<div layout="row" layout-align="start end">
+	<img src="assets/images/em.png" class="md-card-image" alt="user avatar"> 
+					</div>
+					<main class='md-padding' layout="row" flex>
+        <div flex>	
+	    <div layout="row" layout-align="end end">
+        <md-card-actions layout="row" layout-align="end center"> 
+				<md-button class="md-raised md-primary">Login</md-button>
+				</md-card-actions> 
+       
+		
+		
+       <md-button class="md-raised md-primary"  ng-click="gotoSchoolSignup()">School SignUp</md-button>
+			</div>
+		
 <!--   <md-button class="menu"
 		ng-click="nv.toggleList()" aria-label="Show User List"> <md-icon
 		md-svg-icon="menu"></md-icon> </md-button>  --> 
@@ -25,6 +39,9 @@ ng-init="nv.load()">
           </md-menu-content>
         </md-menu>
       </div> -->
+      
+      </div>
+</main>
  </md-toolbar>
 	
 
