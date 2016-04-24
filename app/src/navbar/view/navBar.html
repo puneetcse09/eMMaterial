@@ -5,45 +5,30 @@ ng-init="nv.load()">
 	<div layout="row" layout-align="start end">
 	<img src="assets/images/em.png" class="md-card-image" alt="user avatar"> 
 					</div>
-					<main class='md-padding' layout="row" flex>
+		
+		<main class='md-padding' layout="row" flex>
         <div flex>	
-	    <div layout="row" layout-align="end end">
-        <md-card-actions layout="row" layout-align="end center"> 
-				<md-button class="md-raised md-primary">Login</md-button>
-				</md-card-actions> 
-       
+	    <div layout="row" layout-align="end center">
+	<div ng-controller="loginPageCtrl">
+	    	<md-card-actions>
+     <md-button class="md-raised md-primary" ng-click="showAddLoginDialog($event)">Login</md-button>
+     	</md-card-actions>	
+     	</div>	
+     	
+     	<div ng-controller="schoolSignupCtrl">
+     	<md-card-actions>		
+		<md-button class="md-raised md-primary" ng-click="showAddSchoolSignupDialog($event)">School Signup</md-button>
+			</md-card-actions>				
+     </div>
+     </div>
+     		</div>
 		
-		
-       <md-button class="md-raised md-primary"  ng-click="gotoSchoolSignup()">School SignUp</md-button>
-			</div>
-		
-<!--   <md-button class="menu"
-		ng-click="nv.toggleList()" aria-label="Show User List"> <md-icon
-		md-svg-icon="menu"></md-icon> </md-button>  --> 
-    
-     <!--  <div layout="column" layout-align="right right">
-        <md-menu md-position-mode="target-right target" >
-          <md-button aria-label="Open Menu" ng-click="$mdOpenMenu($event)">
-            <md-icon md-svg-icon="person_white"></md-icon>
-          </md-button>
-          <md-menu-content width="3" >
-            <md-menu-item ng-repeat="item in menuData">
-             
-               <md-button ng-click="nv.openLoginPanel($event)">
-                 <div layout="row" flex>
-                    <p flex>{{item.name}}</p>
-                    	<md-icon md-menu-align-target md-svg-icon="{{item.icon}}"></md-icon> 
-                  </div> 
-              </md-button>
-            </md-menu-item>
-          </md-menu-content>
-        </md-menu>
-      </div> -->
+
       
-      </div>
+ 
 </main>
  </md-toolbar>
 	
+</div>			
 
 
-</div>

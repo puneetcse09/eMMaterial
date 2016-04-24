@@ -1,7 +1,41 @@
-
-<div flex layout="column" tabIndex="-1" role="main"
-	ng-controller="schoolSignupCtrl as ca" class="md-whiteframe-z2"
-	ng-init="ca.load()">
-
-
-</div>	
+	<md-dialog aria-label="Mango (Fruit)" flex="80">
+     	<md-content class="md-padding">
+          	<form name="userForm">
+          		<div layout layout-sm="column">
+	          		<md-input-container>
+				<label>School Name</label>  
+  			 <input name="schoolName" ng-model="schoolName" required >
+    	</md-input-container>
+					 <md-input-container>
+		<label>School Location</label>  
+  			 <input name="schoolLocation" ng-model="schoolLocation" required >
+    	</md-input-container>
+    	</div>
+    	<div layout layout-sm="column">
+    		<md-input-container>
+				<label>First Name</label>  
+  			 <input name="firstName" ng-model="firstName" required >
+    	</md-input-container>
+    		<md-input-container>
+				<label>Last Name</label>  
+  			 <input name="lastName" ng-model="lastName" required >
+    	</md-input-container>
+    	</div>
+    		<div layout layout-sm="column">
+    		<md-input-container>
+				<label>Contact No</label>  
+  			 <input name="contactNo" ng-model="contactNo" required >
+    	</md-input-container>
+    		<md-input-container>
+				<label>Email Id</label>  
+  			 <input name="emailId" ng-model="emailId" required >
+    	</md-input-container>
+          		</div>          		
+         
+          		</form>
+	        </md-content>
+	        <div class="md-actions" layout="row"> <span flex></span>
+	          	<md-button ng-click="cancel()"> Cancel </md-button>
+	          	<md-button ng-click="save()" class="md-primary"> Save </md-button>
+	         </div>
+	</md-dialog>

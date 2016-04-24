@@ -1,24 +1,24 @@
 (function(){
-  angular.module('schoolSignup')
-         .controller('schoolSignupCtrl', ['$mdSidenav', '$mdDialog', '$mdBottomSheet', '$log', '$q','$scope', 'appUtils',
-                                          schoolSignupCtrl
+  angular.module('loginPage')
+         .controller('loginPageCtrl', ['$mdSidenav', '$mdDialog', '$mdBottomSheet', '$log', '$q','$scope', 'appUtils',
+                                       loginPageCtrl
                                        ]);
 
-  function schoolSignupCtrl($mdSidenav, $mdDialog , $mdBottomSheet, $log, $q, $scope, appUtils) {
+  function loginPageCtrl($mdSidenav, $mdDialog , $mdBottomSheet, $log, $q, $scope, appUtils) {
 	    var self = this;
 	    self.states = "";    
 	    self.load = function(){
-	    	$log.info("School signup >> "+self);
+	    	$log.info("Login >> "+self);
 	    	
 	    }
 	    	
 	  /**
 	   * Open Register Self dialog box
 	   */  
-	  $scope.showAddSchoolSignupDialog = function($event) {
+	  $scope.showAddLoginDialog = function($event) {
 	        $mdDialog.show({
 	          controller: DialogController,
-	          templateUrl: 'src/schoolSignup/view/schoolSignup.html',
+	          templateUrl: 'src/loginPage/view/loginPage.html',
 	          targetEvent: $event,
 	        })
 	        .then(function(answer) {

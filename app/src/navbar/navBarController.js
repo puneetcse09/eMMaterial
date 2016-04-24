@@ -3,7 +3,7 @@
   angular
        .module('navBar')
        .controller('navBarController', [
-          'navBarService', '$mdSidenav', '$mdBottomSheet', '$log', '$q','$scope','$mdDialog',
+          'navBarService', '$mdSidenav', '$mdBottomSheet', '$log', '$q','$scope','$mdDialog','$state',
           navBarController
        ]);
   
@@ -14,7 +14,7 @@
    * @param navBarService
    * @constructor
    */
-  function navBarController( navBarService, $mdSidenav, $mdBottomSheet, $log, $q, $scope, $mdDialog) {
+  function navBarController( navBarService, $mdSidenav, $mdBottomSheet, $log, $q, $scope, $mdDialog,$state) {
     var self = this;
 
    self.toggleList   = toggleUsersList;
@@ -31,11 +31,7 @@
    	$log.debug("Inside load of navBarController");
    	getMenuList();
    }
-   $scope.gotoSchoolSignup = function (data) {
-		$log.debug("School Sign Up");
-   	$state.go('schoolSignup');
-   	
-   };
+  
     
     // *********************************
     // Internal methods

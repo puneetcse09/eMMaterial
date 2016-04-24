@@ -1,6 +1,6 @@
 var myapp = angular.module('starterApp', 
 		[ 'ng', 'ngMaterial', 'ngMdIcons', "ngAnimate", "ngAria",'ui.router',
-		  'sideNavBar','navBar','emHome','schoolSignup',
+		  'sideNavBar','navBar','emHome','loginPage','schoolSignup',
 		   'ngAutocomplete'])
 		  .run(
 				  ['$rootScope', '$state', '$stateParams',
