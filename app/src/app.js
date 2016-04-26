@@ -1,6 +1,6 @@
 var myapp = angular.module('starterApp', 
 		[ 'ng', 'ngMaterial', 'ngMdIcons', "ngAnimate", "ngAria",'ui.router',
-		  'sideNavBar','navBar','emHome','loginPage','schoolSignup',
+		  'sideNavBar','navBar','emHome','loginPage','loginHome','schoolSignup',
 		   'ngAutocomplete'])
 		  .run(
 				  ['$rootScope', '$state', '$stateParams',
@@ -17,16 +17,7 @@ var myapp = angular.module('starterApp',
 				  function($mdThemingProvider, $mdIconProvider, $stateProvider, $urlRouterProvider) {
 					  
 					  $urlRouterProvider.otherwise('/home');
-					  /*$mdIconProvider.iconSet("avatar", './assets/svg/avatars.svg', 128);
-		        
-					  $mdIconProvider
-                      .defaultIconSet("./assets/svg/avatars.svg", 128)
-                      .icon("menu"       , "./assets/svg/menu.svg"        , 24)
-                      .icon("share"      , "./assets/svg/share.svg"       , 24)
-                      .icon("google_plus", "./assets/svg/google_plus.svg" , 512)
-                      .icon("hangouts"   , "./assets/svg/hangouts.svg"    , 512)
-                      .icon("twitter"    , "./assets/svg/twitter.svg"     , 512)
-                      .icon("phone"      , "./assets/svg/phone.svg"       , 512);*/
+					 
 
 					  
 					  $mdThemingProvider.alwaysWatchTheme(true);

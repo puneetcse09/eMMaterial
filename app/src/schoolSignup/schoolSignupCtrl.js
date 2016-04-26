@@ -11,6 +11,7 @@
 	    	$log.info("School signup >> "+self);
 	    	
 	    }
+	   
 	    	
 	  /**
 	   * Open Register Self dialog box

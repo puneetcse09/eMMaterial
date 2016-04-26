@@ -1,23 +1,58 @@
-	<md-dialog aria-label="Mango (Fruit)" flex="80">
-     	<md-content class="md-padding">
-          	<form name="userForm">
-          		<div layout layout-sm="row">
+
+<md-dialog aria-label="login" flex="40">
+
+		<md-content class="md-padding">
+		<form name="loginForm">
+		
+		<h2>Login </h2>
+	    
+          		 <div layout="column">
+          		
 	          		<md-input-container>
 				<label>User Name</label>  
-  			 <input name="userName" ng-model="userName" required >
+  			 <input name="userName" ng-model="userName" required  >
+  			  <span style="color:red" ng-show="loginForm.userName.$dirty &&loginForm.userName.$touched && loginForm.userName.$invalid">
+    	 <span ng-show="loginForm.userName.$error.required" class="help-block">User name is required.</span></span>
+  			 
     	</md-input-container>
-    	</div>     
-    	<div layout layout-sm="row">
+    	
+    	
 					 <md-input-container>
 	<label>Password</label>  
-  			 <input name="password" ng-model="password" required >
+  			 <input name="pass" ng-model="pass" type="password" required >
+  			 <span style="color:red" ng-show="loginForm.pass.$dirty && loginForm.pass.$touched && loginForm.pass.$invalid">
+    	  <span ng-show="loginForm.pass.$error.required" class="help-block">Password is required.</span></span>
+ 
     	</md-input-container>
-          		</div>          		
-          <a href="">Forgot Password</a>	
-          		</form>
-	        </md-content>
-	        <div class="md-actions" layout="row"> <span flex></span>
-	          	<md-button ng-click="cancel()"> Cancel </md-button>
-	          	<md-button ng-click="save()" class="md-primary"> Save </md-button>
+    	
+    	<span ng-show="error">{{error}}</span>
+    	  <div ng-controller="loginPageCtrl">	
+          		      		
+          <a href=""ng-click="forgotPass()">Forgot Password</a>	
+        
+          	</div> 
+          	
+          	
+    <div ng-controller="loginPageCtrl">	
+         
+        
+    <label for="remember">
+            <input id="rememberMe" type="checkbox" ng-model="rememberMe" class="ng-valid ng-dirty ng-valid-parse ng-touched">
+        </label>
+<a href=""ng-click="rememberPass()">Remember Me</a>
+</div>
+          	
+    </div>      	
+          	
+	      <div layout="row" layout-align="center center">
+	       
+	        <md-button ng-click="login(userName, pass)" class="md-raised  md-primary" > Login </md-button>
+	          	<md-button class="md-raised md-primary" ng-click="cancel()"> Cancel </md-button>
+	          	
+	        
 	         </div>
+	         </form>
+	          
+	        </md-content>
+	        
 	</md-dialog>
