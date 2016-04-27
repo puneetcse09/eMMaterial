@@ -32,7 +32,11 @@
    	getMenuList();
    }
   
-    
+   $scope.gotoLoginHome = function () {
+   	$log.debug("In gotoLoginHome  : ");
+   		$state.go('loginHome');
+   	
+   };
     // *********************************
     // Internal methods
     // *********************************

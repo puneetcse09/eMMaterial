@@ -2,24 +2,23 @@
 ng-init="nv.load()">
   <md-toolbar layout="row" class="md-whiteframe-z1">
       <!-- h1 style="color: white; font-weight: bold;" class="cursor-pointer"><span> eM </span></h1>-->
-	<div layout="row" layout-align="start end">
-	<img src="assets/images/em.png" class="md-card-image" alt="user avatar"> 
-					</div>
-		
-		<main class='md-padding' layout="row" flex>
+	<main class='md-padding' layout="row" flex>
+	
         <div flex>	
-	    <div layout="row" layout-align="end center">
-	<div ng-controller="loginPageCtrl">
+       
+         <div layout="row" layout-align="end center">
+	 <img src="assets/images/em1.png" alt="user avatar"> 
+	 
 	    	<md-card-actions>
-     <md-button class="md-raised md-primary" ng-click="showAddLoginPageDialog($event)">Login</md-button>
+     <md-button ng-click="gotoLoginHome()">Login</md-button>
      	</md-card-actions>	
-     	</div>	
+ 	
      	
-     	<div ng-controller="schoolSignupCtrl">
+     	<!-- div ng-controller="schoolSignupCtrl">
      	<md-card-actions>		
-		<md-button class="md-raised md-primary" ng-click="showAddSchoolSignupDialog($event)">School Signup</md-button>
+		<md-button ng-click="showAddSchoolSignupDialog($event)">School Signup</md-button>
 			</md-card-actions>				
-     </div>
+     </div-->
      </div>
      		</div>
 		
