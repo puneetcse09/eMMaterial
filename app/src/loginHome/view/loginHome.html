@@ -1,18 +1,32 @@
-
-<div tabIndex="-1" role="main"
-	ng-controller="loginHomeCtrl as ca" class="md-whiteframe-z2"
-	ng-init="ca.load()">
-<main class='md-padding' layout="row" flex>
-<div layout="row" layout-sm="column">
-  <div flex>
-   <img src="assets/images/em1.png" alt="user avatar"> 
-  </div>
-  <div flex>
-  <img src="assets/images/em1.png" alt="user avatar"> 
-  </div>
+<div ng-controller="loginHomeCtrl as ca" layout="column" ng-cloak=""
+	class="md-inline-form" ng-init="ca.load()">
+	<md-content class="md-padding" layout-xs="column" layout="row">
+	
+			<div flex-xs flex-gt-xs="25" layout="column">
+			</div>
+			<div flex-xs flex-gt-xs="75" layout="column">
+				<md-card> 
+					<md-card-title> 
+					<md-card-title-text>
+						<span class="md-headline">Login</span> 
+					 </md-card-title-text> 
+				</md-card-title> 
+				<md-card-content>
+					<form name="userForm">          		
+	          		<input>
+          			</form>
+        		</md-card-content> 
+        	<md-card-actions layout="row" layout-align="end center">
+				<md-button class="md-raised md-primary" 
+					ng-disabled="userForm$invalid">BUTTON</md-button>
+				<md-button class="md-raised">Reset</md-button> 
+			</md-card-actions> 
+		</md-card>
+	</div>
+		<div flex-xs flex-gt-xs="25" layout="column">
 </div>
 
-   <!-- img src="assets/images/backimg.png" alt="user avatar" height="70" width="70"--> 
-	
-</main>
-</div>	
+</md-content>
+
+
+</div>
