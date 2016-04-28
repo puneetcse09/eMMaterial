@@ -1,0 +1,26 @@
+md-toolbar:not(.md-menu-toolbar) {
+    background-color:#6699FF;
+    
+}
+md-toolbar {
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    font-size: 20px;
+    min-height: 10px;
+    height: 40px;
+    width: 100%;
+     max-height: 50px
+    transition: all .5s cubic-bezier(.35,0,.25,1);
+    transition-property: background-color,fill,color;
+}
+   
+
+
+    
