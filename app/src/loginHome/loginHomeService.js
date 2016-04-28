@@ -1,32 +1,15 @@
 (function(){
   'use strict';
 
-  angular.module('navBar')
+  angular.module('loginHome')
          .service('loginHomeService', ['$q' , '$http' , '$log', '$filter', loginHomeService]);
-
-  /**
-   * Users DataService
-   * Uses embedded, hard-coded data model; acts asynchronously to simulate
-   * remote data service call(s).
-   *
-   * @returns {{loadAll: Function}}
-   * @constructor
-   */
   function loginHomeService($q, $http , $log, $filter){
 	  
 	  return({
-			getMenuList : getMenuList
+		 
 		});
 	  
-	  function getMenuList(){
-			$log.info("inside getMenuList in service ");
-			var request = $http({
-				method:"GET",
-				url:"/api/loginHome/getMenuList",
-			});
-			return(request.then( handleSuccess, handleError ));
-		};
-		
+	  
 		
 		
 		 

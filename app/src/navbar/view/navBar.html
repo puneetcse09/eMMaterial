@@ -1,18 +1,11 @@
+	<link rel="stylesheet" href="/src/navbar/view/navBar.css">
 <div ng-controller="navBarController as nv" id="header"
 ng-init="nv.load()">
 <md-toolbar>
     <div class="md-toolbar-tools">
-		<!--     
-        <md-button class="md-icon-button" aria-label="Icon">
-          <md-tooltip>Menu</md-tooltip>
-          <md-icon class="md-default-theme" md-svg-icon="menu_white"></md-icon>
-        </md-button> <h1>
-          <span>eM</span>
-        </h1>
-        -->
-       
+		
           <span flex></span>
-         <h1 style="color: white; font-weight: bold;" class="cursor-pointer"><span> eM </span></h1>
+         <h1 style="color: white; font-weight: bold;" class="cursor-pointer"><span> <img src="assets/images/em1.png" alt="user avatar"> </span></h1>
         <span flex></span>
          <md-button ng-click="gotoLoginHome()">Login
          	<md-tooltip>Click to login</md-tooltip>

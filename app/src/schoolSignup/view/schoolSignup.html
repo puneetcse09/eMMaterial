@@ -1,9 +1,17 @@
-	<md-dialog aria-label="schoolSignup" flex="80">
-     	<md-content class="md-padding">
+	<link rel="stylesheet" href="/src/schoolSignup/view/schoolSignup.css">
+	<div flex layout="column" tabIndex="-1" role="main"
+	ng-controller="schoolSignupCtrl as ul" class="md-whiteframe-z2"
+	ng-init="ul.load()">
+	 <section>
+         <div class="lc-block" >
+	
           	<form name="signUpForm">
           		<div layout="column">
-          		 <h2>School Signup</h2>
-          		   <h2>School Details</h2>
+          		<div layout="row">
+      	 <span>
+          		<md-icon md-svg-icon="school_black"> </md-icon></span>
+         <label>School Details</label> 
+         </div> 	
 	          		<md-input-container>
 				<label>School Name</label>  
   			 <input name="schoolName" ng-model="schoolName" required >
@@ -21,7 +29,11 @@
     	</md-input-container>
     	
     	</div>
-    	  <h2> User Details</h2>
+    	<div layout="row">
+    	<span>
+          		<md-icon md-svg-icon="person_black"> </md-icon></span>
+    	 <label>User Details</label>
+    	 </div>  		
     	<div layout="row" layout-align="start center">
     	  
     		<md-input-container>
@@ -68,12 +80,13 @@
   </span>
     	</md-input-container>
           		</div>          		
-         
-          		</form>
-	        </md-content>
-	        <div class="md-actions" layout="row"> <span flex></span>
-	        <md-button ng-click="save()" class="md-raised md-primary"> Register </md-button>
+          <div layout="row" layout-align="start center">
+	        <md-button class="md-raised md-primary"> Register </md-button>
 	          	<md-button class="md-raised md-primary"  ng-click="cancel()"> Cancel </md-button>
 	          	
 	         </div>
-	</md-dialog>
+          		</form>
+	        
+	    </div>
+	</section>    
+	</div>
