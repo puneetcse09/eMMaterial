@@ -26,7 +26,12 @@
     	     
     }
    
-   
+    $scope.gotoNewLogin = function ()
+    {
+  		 
+  			 $state.go('loginPage');
+  			
+  		 };
      
      
 

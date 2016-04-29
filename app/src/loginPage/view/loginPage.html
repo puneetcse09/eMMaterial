@@ -1,43 +1,36 @@
-
+<link rel="stylesheet" href="./src/loginPage/view/loginPage.css">
 <div flex layout="column" tabIndex="-1" role="main"
 	ng-controller="loginPageCtrl as ul" class="md-whiteframe-z2"
 	ng-init="ul.load()">
 	
-	<md-content flex id="content">
-<!-- md-button class="md-icon-button" aria-label="Icon">
-          <md-tooltip>Menu</md-tooltip>
-          <md-icon class="md-default-theme" md-svg-icon="menu_white"></md-icon>
-        </md-button-->
-		
-		
-		
-	    <form name="loginForm">
-		
-   
-		<h2>Login </h2>
-	    
-          		 <div layout="row" >
-          		<span class="md-headline">
+	
+<div class="login-content ng-scope" >
+
+            
+        <div class="lc-block ng-scope toggled">
+         <form id="loginForm">
+         <div layout="column" >
+         
+          <div layout="row" >
+          		<span>
           		<md-icon md-svg-icon="person_black"> </md-icon></span>
+          
 		<md-input-container>
-				<label>User Name</label>  
-  			 <input name="userName" ng-model="userName" required  >
+				
+  			 <input name="userName" ng-model="userName" required size="45" placeholder="UserName">
   			  <span style="color:red" ng-show="loginForm.userName.$dirty &&loginForm.userName.$touched && loginForm.userName.$invalid">
     	 <span ng-show="loginForm.userName.$error.required" class="help-block">User name is required.</span></span>
   			 
     	</md-input-container>
-
 		
-	          	
-			
-    	
-	</div>
-    	<div layout="row">
-    	<span class="md-headline">
+	      
+	       </div> 
+	      <div layout="row" >
+    	<span>
     	<md-icon md-svg-icon="access_black"> </md-icon></span>	
 	 <md-input-container>
 	<label>Password</label>  
-  			 <input name="pass" ng-model="pass" type="password" required >
+  			 <input name="pass" ng-model="pass" type="password" required size="45">
   			 <span style="color:red" ng-show="loginForm.pass.$dirty && loginForm.pass.$touched && loginForm.pass.$invalid">
     	  <span ng-show="loginForm.pass.$error.required" class="help-block">Password is required.</span></span>
  
@@ -46,44 +39,41 @@
 				
     	
 	</div>
-	<div layout="row">
+	<div layout="row" >
     	<span ng-show="error">{{error}}</span>
     	 </div>
     	 <div layout="row">
-          <a href=""ng-click="forgotPass()">Forgot Password</a>	
-        </div>
-          	
-          	
-          	
-   
-         
-       <div layout="row">  
-    <label for="remember">
+    	  <a ng-click="login(userName, pass)">Login</a>
+          <!-- a ng-click="forgotPass()">Forgot Password</a-->	
+         <!-- a ng-click="forgotPass()">Forgot Password</a-->	
+    <!-- label for="remember">
             <input id="rememberMe" type="checkbox" ng-model="rememberMe" class="ng-valid ng-dirty ng-valid-parse ng-touched">
         </label>
-<a href=""ng-click="rememberPass()">Remember Me</a>
+<a ng-click="rememberPass()">Remember Me</a-->
  </div>
           	
-       	   
-          	
-	      <div layout="row" layout-align="start center" >
+       	 	
+	      <!-- div layout="row" layout-align="start center" >
 	       
 	        <md-button ng-click="login(userName, pass)" class="md-raised  md-primary" > Login </md-button>
 	          	<md-button class="md-raised md-primary"> Cancel </md-button>
 	          	 </div>
-	       
-	        
-	        
-	         </form>
-	          
+	     </div-->
+	     </form>
+	       </div>
 	
-		
-        
-          		
- 
-        
-    
-	  </md-content>     
-	        
-	        
-</div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+   
+      
+           
+     </div>

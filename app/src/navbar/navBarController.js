@@ -34,7 +34,7 @@
   
    $scope.gotoLoginHome = function () {
    	$log.debug("In gotoLoginHome  : ");
-   		$state.go('loginHome');
+   		$state.go('loginPage');
    	
    };
     // *********************************
