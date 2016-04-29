@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href="./src/schoolSignup/view/schoolSignup.css">
 	<div flex layout="column" tabIndex="-1" role="main"
 	ng-controller="schoolSignupCtrl as ul" class="md-whiteframe-z2"
 	ng-init="ul.load()">
@@ -62,7 +62,7 @@
     		<div layout="row" layout-align="start center">
     		<md-input-container>
 				<label>Contact No</label>  
-  			 <input type="number" name="contactNo" ng-model="contactNo" required ng-minlength="10" ng-maxlength="10" >
+  			 <input type="number" name="contactNo" ng-model="contactNo" required >
   			 <span style="color:red" ng-show="signUpForm.contactNo.$dirty && signUpForm.contactNo.$invalid">
     	<span class="help-block" ng-show="signUpForm.contactNo.$error.required && signUpForm.contactNo.$error.number">Valid phone number is required</span>
       <span class="help-block" ng-show="((signUpForm.contactNo.$error.minlength ||signUpForm.contactNo.$error.maxlength)) ">phone number should be 10 digits</span>

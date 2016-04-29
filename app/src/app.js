@@ -22,7 +22,7 @@ var myapp = angular.module('starterApp',
 					  
 					  $mdThemingProvider.alwaysWatchTheme(true);
 					  $mdThemingProvider.theme('default')
-                          .primaryPalette('blue')
+                          .primaryPalette('cyan')
                           .accentPalette('red');
 //                    red, pink, purple, deep-purple, indigo, blue, light-blue, 
 //                    cyan, teal, green, light-green, lime, yellow, amber, orange, 

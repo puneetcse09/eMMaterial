@@ -1,7 +1,4 @@
-md-toolbar:not(.md-menu-toolbar) {
-    background-color:#6699FF;
-    
-}
+
 md-toolbar {
     box-sizing: border-box;
     display: -webkit-flex;

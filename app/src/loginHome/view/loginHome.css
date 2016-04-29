@@ -2,15 +2,9 @@
   box-sizing: border-box;
 }
 
- body {
-    
-   
-    background-color:#CCFFFF;
-}
-        
 
 section {
-        background: white;
+        background: #CCFFFF;
         color: black;
         border-radius: 0em;
         padding: 1em;
