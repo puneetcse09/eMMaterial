@@ -20,10 +20,8 @@
     	$scope.searchParams = $stateParams;
     	$log.info("Inside load of EmHomeCtrl "+JSON.stringify($stateParams));
     	getEmHome($scope.searchParams);
-    
-    	
-    	     
     }
+
     function getEmHome(params){
     	$log.debug("In getEmHome params  : "+JSON.stringify(params));
 		

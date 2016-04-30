@@ -1,18 +1,19 @@
-
 <div ng-controller="navBarController as nv" id="header"
 ng-init="nv.load()">
 <md-toolbar>
-    <div class="md-toolbar-tools">
-		
-        <img src="assets/images/em1.png" alt="user avatar"> 
-         <span flex></span>
-          <span flex></span>
-         <md-button id="but" ng-click="gotoLoginHome()">Login
+	<div class="md-toolbar-tools">
+ 	 <h1 style="color: white; font-weight: bold;" class="cursor-pointer"><span ui-sref="emHome"> eM </span></h1> 
+		<!-- <span ui-sref="emHome" class="cursor-pointer">
+			<img src="assets/images/em1.png" alt="user avatar">
+		</span>  -->
+        <span flex></span>
+        <span flex></span>
+        <md-button id="but" ng-click="gotoLoginHome()">Login
          	<md-tooltip>Click to login</md-tooltip>
-         </md-button>
-<md-button id="but" ng-click="gotoSchoolSignup()">Register
+        </md-button>
+		<md-button id="but" ng-click="gotoSchoolSignup()">Register
          	<md-tooltip>Click to register school details</md-tooltip>
-         </md-button>
+        </md-button>
           <!-- span flex></span>
          <h1 style="color: white; font-weight: bold;" class="cursor-pointer"><span> <img src="assets/images/em1.png" alt="user avatar"> </span></h1>
         <span flex></span>
@@ -23,7 +24,6 @@ ng-init="nv.load()">
        <!-- <md-button ng-click="showAddSchoolSignupDialog($event)">School Signup
        		<md-tooltip>Click to Signup for school</md-tooltip>
        	</md-button> -->
-       
    </div>
 </md-toolbar>
   <!-- <md-toolbar layout="row" class="md-whiteframe-z1">
