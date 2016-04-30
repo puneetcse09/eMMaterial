@@ -4,12 +4,21 @@ ng-init="nv.load()">
 <md-toolbar>
     <div class="md-toolbar-tools">
 		
+        <img src="assets/images/em1.png" alt="user avatar"> 
+         <span flex></span>
           <span flex></span>
+         <md-button id="but" ng-click="gotoLoginHome()">Login
+         	<md-tooltip>Click to login</md-tooltip>
+         </md-button>
+<md-button id="but" ng-click="gotoSchoolSignup()">Register
+         	<md-tooltip>Click to register school details</md-tooltip>
+         </md-button>
+          <!-- span flex></span>
          <h1 style="color: white; font-weight: bold;" class="cursor-pointer"><span> <img src="assets/images/em1.png" alt="user avatar"> </span></h1>
         <span flex></span>
          <md-button ng-click="gotoLoginHome()">Login
          	<md-tooltip>Click to login</md-tooltip>
-         </md-button>
+         </md-button-->
        
        <!-- <md-button ng-click="showAddSchoolSignupDialog($event)">School Signup
        		<md-tooltip>Click to Signup for school</md-tooltip>

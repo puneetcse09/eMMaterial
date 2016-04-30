@@ -13,6 +13,10 @@
                       .icon("menu_white"  , "./assets/icons/ic_view_headline_white_24px.svg"        , 24)
                       .icon("close_black" , "./assets/icons/ic_close_black_24px.svg"        , 24)
                       .icon("close_white" , "./assets/icons/ic_close_white_24px.svg"        , 24)
+                      
+                      .icon("arrow_white48" , "./assets/icons/ic_arrow_forward_white_48px.svg"        , 48)
+                      
+                       .icon("arrow_white" , "./assets/icons/ic_arrow_forward_white_24px.svg"        , 24)
                       .icon("person_black" , "./assets/icons/ic_person_black_24px.svg"        , 24)
                        .icon("access_black" , "./assets/icons/ic_accessibility_black_24px.svg"        , 24)
                       .icon("person_white" , "./assets/icons/ic_person_white_24px.svg"        , 24)

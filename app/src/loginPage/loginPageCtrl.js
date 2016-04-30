@@ -46,9 +46,14 @@
      	  
     		 
    	  };
-     
+   	 $scope.gotoSchoolSignup = function (){
+   		
+   			 $state.go('schoolSignup');
+   			
+   		 };
+
       $scope.rememberPass = function () {
-          if ($scope.rememberMe) {
+          if ($scope.keepMe) {
               $window.alert("User Name: abc Password :abc");
           } else {
               $window.alert("CheckBox is not checked.");

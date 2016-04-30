@@ -37,6 +37,11 @@
    		$state.go('loginPage');
    	
    };
+   $scope.gotoSchoolSignup = function (){
+  		
+			 $state.go('schoolSignup');
+			
+		 };
     // *********************************
     // Internal methods
     // *********************************

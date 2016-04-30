@@ -1,12 +1,55 @@
+#reg {
+    border-radius: 15px;
 
+    color: #fff;
+    display: inline-block;
+    
+    margin: 12px 12px;
+    line-height: 23px;
+    min-height: 16px;
+    background:#ff9800;
+   font-size: 13px;
+    min-width: 16px;
+   
+    text-transform: capitalize;
+    
+   
+}
+#forgot {
+    border-radius: 15px;
+
+    color: #fff;
+    display: inline-block;
+    
+    margin: 6px 8px;
+    line-height: 23px;
+    min-height: 16px;
+    background:#ff9800;
+   font-size: 13px;
+    min-width: 16px;
+  
+    text-align: center;
+    text-transform: capitalize;
+    
+   
+}
 md-input-container {
    
     padding: 0px;
     margin: 0px;
     vertical-align: middle;
 }
+#arrow {
+    margin: 6px;
+    background-repeat: no-repeat no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    fill: currentColor;
+    height: 24px;
+    width: 24px;
+}
 md-icon {
-    margin: auto;
+    margin: 10px;
     background-repeat: no-repeat no-repeat;
     display: inline-block;
     vertical-align: middle;
@@ -22,7 +65,9 @@ body {
     font-weight: 400;
     position: relative;
 }
-
+a:not(.md-button) {
+    color: black;
+}
 body {
     font-family: roboto;
     font-size: 13px;
@@ -58,11 +103,22 @@ body {
 }
 
 
+.md-button.md-fab.md-fab-bottom-right {
+    top: auto;
+    right: -40px;
+    bottom: 90px;
+    left: auto;
+    position: absolute;
+        background-color: #f44336;
+}
+
+
+
 .lc-block.toggled {
     z-index: 10;
 }
 .lc-block:not(.lcb-alt) {
-    padding: 35px 75px 35px;
+    padding: 45px 95px 35px;
 }
 
 .lc-block {
@@ -82,15 +138,3 @@ body {
 div {
     display: block;
 }
-section {
-        background: white;
-        color: black;
-        border-radius: 0em;
-        padding: 1em;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-         margin-top: 42px;
-        margin-right: -50%;
-        transform: translate(-50%, -50%)
-         }

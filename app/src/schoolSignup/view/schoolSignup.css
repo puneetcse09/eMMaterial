@@ -1,4 +1,18 @@
+#gold{
+    border-radius: 15px;
 
+    color: #fff;
+    display: inline-block;
+    
+    margin: 12px 12px;
+    line-height: 50px;
+    min-height: 60px;
+    background:#CCFF33;
+   font-size: 13px;
+    min-width: 60px;
+   text-transform: capitalize;
+    
+}
 md-input-container {
    
     padding: 5px;

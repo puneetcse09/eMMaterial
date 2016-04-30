@@ -43,16 +43,25 @@
     	<span ng-show="error">{{error}}</span>
     	 </div>
     	 <div layout="row">
-    	  <a ng-click="login(userName, pass)">Login</a>
+    	  <!-- a ng-click="login(userName, pass)">Login</a-->
           <!-- a ng-click="forgotPass()">Forgot Password</a-->	
          <!-- a ng-click="forgotPass()">Forgot Password</a-->	
-    <!-- label for="remember">
-            <input id="rememberMe" type="checkbox" ng-model="rememberMe" class="ng-valid ng-dirty ng-valid-parse ng-touched">
+    <label for="keepMe">
+            <input id="keepMe" type="checkbox" ng-model="keepMe" class="ng-valid ng-dirty ng-valid-parse ng-touched">
         </label>
-<a ng-click="rememberPass()">Remember Me</a-->
+<a ng-click="rememberPass()">Keep me signed in</a>
  </div>
-          	
-       	 	
+         
+    
+        <md-button class="md-fab md-fab-bottom-right" >
+         <md-icon id=arrow md-svg-icon="arrow_white" ng-click="login(userName, pass)"><md-tooltip>Click to login</md-tooltip> </md-icon>
+    </md-button>	
+       	<div layout="row" layout-align="start center" >
+	       
+	        <md-button id="reg" ng-click="gotoSchoolSignup()"> Register</md-button>
+	          	<md-button id="forgot" ng-click="forgotPass()">Forgot Password</md-button>
+	          	 </div>
+	     </div>
 	      <!-- div layout="row" layout-align="start center" >
 	       
 	        <md-button ng-click="login(userName, pass)" class="md-raised  md-primary" > Login </md-button>

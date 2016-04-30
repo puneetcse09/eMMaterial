@@ -1,5 +1,5 @@
 <!-- <link rel="stylesheet" href="./src/schoolSignup/view/schoolSignup.css"> -->
-<<style>
+<style>
 
 md-input-container {
    
@@ -47,7 +47,51 @@ body {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+#gold{
+    border-radius: 0px;
 
+    color: black;
+    display: inline-block;
+    
+    margin: 12px 12px;
+    line-height: 100px;
+    min-height: 60px;
+    background:#FFFF33;
+   font-size: 13px;
+    min-width: 100px;
+   text-transform: capitalize;
+    
+}
+#platinum{
+    border-radius: 0px;
+
+    color: black;
+    display: inline-block;
+    
+    margin: 12px 12px;
+    line-height: 100px;
+    min-height: 60px;
+    background:#00CC66;
+   font-size: 13px;
+    min-width: 100px;
+   text-transform: capitalize;
+    
+}
+#platinump{
+    border-radius: 0px;
+
+    color: black;
+    display: inline-block;
+    
+    margin: 12px 12px;
+    line-height: 100px;
+    min-height: 60px;
+    background:#9966CC;
+   font-size: 13px;
+    min-width: 100px;
+   text-transform: capitalize;
+    
+}
 .login-content:before {
     height: 50%;
     width: 100%;
@@ -184,6 +228,33 @@ section {
 	          	<md-button class="md-raised md-primary"  ng-click="cancel()"> Cancel </md-button>
 	          	
 	         </div-->
+	         <div layout="row" layout-align="start center">
+	          <md-input-container>
+	<label>Password</label>  
+  			 <input name="pass" ng-model="pass" type="password" required size="20">
+  			 <span style="color:red" ng-show="signUpForm.pass.$dirty && signUpForm.pass.$touched && signUpForm.pass.$invalid">
+    	  <span ng-show="signUpForm.pass.$error.required" class="help-block">Password is required.</span></span>
+ 
+    	</md-input-container>
+	<md-input-container>
+	<label>Reenter Password</label>  
+  			 <input name="rePass" ng-model="rePass" type="password" required size="20">
+  			 <span style="color:red" ng-show="signUpForm.rePass.$dirty && signUpForm.rePass.$touched && signUpForm.rePass.$invalid">
+    	  <span ng-show="signUpForm.rePass.$error.required" class="help-block">Password is required.</span></span>
+ 
+    	</md-input-container>
+	         </div>
+	         	<div layout="row">
+      	 <span>
+          		<md-icon md-svg-icon="school_black"> </md-icon></span>
+         <label>Available Package</label> 
+         </div> 	
+         	<div layout="row" layout-align="start center" >
+	       
+	        <md-button id="gold"> Gold</md-button>
+	          	<md-button id="platinum">Platinum</md-button>
+	          	<md-button id="platinump">Platinum plus</md-button>
+	          	 </div>
           		</form>
 	        
 	    </div>
