@@ -1,5 +1,59 @@
-<link rel="stylesheet" href="./src/loginHome/view/loginHome.css">
-<div id="loginHomeContainer" tabIndex="-1" role="main"
+<!-- <link rel="stylesheet" href="./src/loginHome/view/loginHome.css">-->
+ <<style>
+<!--
+
+-->
+* {
+  box-sizing: border-box;
+}
+
+section {
+        background: #CCFFFF;
+        color: black;
+        border-radius: 0em;
+        padding: 1em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+         margin-top: 42px;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+         }
+md-input-container {
+   
+    padding: 0px;
+    margin: 0px;
+    vertical-align: middle;
+}
+md-icon {
+    margin: auto;
+    background-repeat: no-repeat no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    fill: currentColor;
+    height: 14px;
+    width: 14px;
+}
+a:not(.md-button) {
+    color:black;
+}
+.lc-block:not(.lcb-alt) {
+    padding: 30px 75px 0px;
+}
+
+/*.lc-block {
+    background: #fff;
+    box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
+    border-radius: 2px;
+    width: 500px;
+    display: inline-block;
+    margin-top: 42px;
+    vertical-align: middle;
+    position: relative;
+}
+*/
+</style>
+ <div id="loginHomeContainer" tabIndex="-1" role="main"
 	ng-controller="loginHomeCtrl as ca" class="md-whiteframe-z2"
 	ng-init="ca.load()">
 
@@ -10,7 +64,7 @@
          
           <div layout="row" >
           		<span>
-          		<md-icon md-svg-icon="person_black"> </md-icon></span>
+          		<md-icon md-svg-icon="person_black" > </md-icon></span>
           
 		<md-input-container>
 				

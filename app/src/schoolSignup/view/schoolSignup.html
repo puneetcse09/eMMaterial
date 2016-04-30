@@ -1,4 +1,101 @@
-<link rel="stylesheet" href="./src/schoolSignup/view/schoolSignup.css">
+<!-- <link rel="stylesheet" href="./src/schoolSignup/view/schoolSignup.css"> -->
+<<style>
+
+md-input-container {
+   
+    padding: 5px;
+    margin: 0px;
+    vertical-align: middle;
+}
+md-icon {
+    margin: auto;
+    background-repeat: no-repeat no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    fill: currentColor;
+    height: 14px;
+    width: 14px;
+}
+.login-content {
+    overflow: hidden;
+    height: 100%;
+}
+body {
+    font-weight: 400;
+    position: relative;
+}
+
+body {
+    font-family: roboto;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #5e5e5e;
+    background-color: #edecec;
+}
+body {
+    margin: 0;
+}
+*, *:active, *:hover {
+    outline: none !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
+*, button, input, i, a {
+    -webkit-font-smoothing: antialiased;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.login-content:before {
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #00bcd4;
+    content: "";
+    z-index: 0;
+}
+
+
+.lc-block.toggled {
+    z-index: 10;
+}
+.lc-block:not(.lcb-alt) {
+    padding: 35px 75px 35px;
+}
+
+.lc-block {
+    background: #fff;
+    box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
+    border-radius: 2px;
+   
+    display: inline-block;
+    position: absolute;
+        top: 45%;
+        left: 50%;
+         margin-top: 42px;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+}
+
+div {
+    display: block;
+}
+section {
+        background: white;
+        color: black;
+        border-radius: 0em;
+        padding: 1em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+         margin-top: 42px;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+         }</style>
 	<div flex layout="column" tabIndex="-1" role="main"
 	ng-controller="schoolSignupCtrl as ul" class="md-whiteframe-z2"
 	ng-init="ul.load()">
