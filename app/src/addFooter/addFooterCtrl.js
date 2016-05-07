@@ -19,6 +19,7 @@ function load(){
    	$log.debug("Inside load of footerController");
    	
    }
+ }
 })();
 
 
