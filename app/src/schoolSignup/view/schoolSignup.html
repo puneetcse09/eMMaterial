@@ -1,262 +1,142 @@
-<!-- <link rel="stylesheet" href="./src/schoolSignup/view/schoolSignup.css"> -->
-<style>
-
-md-input-container {
-   
-    padding: 5px;
-    margin: 0px;
-    vertical-align: middle;
-}
-md-icon {
-    margin: auto;
-    background-repeat: no-repeat no-repeat;
-    display: inline-block;
-    vertical-align: middle;
-    fill: currentColor;
-    height: 14px;
-    width: 14px;
-}
-.login-content {
-    overflow: hidden;
-    height: 100%;
-}
-body {
-    font-weight: 400;
-    position: relative;
-}
-
-body {
-    font-family: roboto;
-    font-size: 13px;
-    line-height: 1.42857143;
-    color: #5e5e5e;
-    background-color: #edecec;
-}
-body {
-    margin: 0;
-}
-*, *:active, *:hover {
-    outline: none !important;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
-}
-*, button, input, i, a {
-    -webkit-font-smoothing: antialiased;
-}
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-#gold{
-    border-radius: 0px;
-
-    color: black;
-    display: inline-block;
-    
-    margin: 12px 12px;
-    line-height: 100px;
-    min-height: 60px;
-    background:#FFFF33;
-   font-size: 13px;
-    min-width: 100px;
-   text-transform: capitalize;
-    
-}
-#platinum{
-    border-radius: 0px;
-
-    color: black;
-    display: inline-block;
-    
-    margin: 12px 12px;
-    line-height: 100px;
-    min-height: 60px;
-    background:#00CC66;
-   font-size: 13px;
-    min-width: 100px;
-   text-transform: capitalize;
-    
-}
-#platinump{
-    border-radius: 0px;
-
-    color: black;
-    display: inline-block;
-    
-    margin: 12px 12px;
-    line-height: 100px;
-    min-height: 60px;
-    background:#9966CC;
-   font-size: 13px;
-    min-width: 100px;
-   text-transform: capitalize;
-    
-}
-.login-content:before {
-    height: 50%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #00bcd4;
-    content: "";
-    z-index: 0;
-}
-
-
-.lc-block.toggled {
-    z-index: 10;
-}
-.lc-block:not(.lcb-alt) {
-    padding: 35px 75px 35px;
-}
-
-.lc-block {
-    background: #fff;
-    box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
-    border-radius: 2px;
-   
-    display: inline-block;
-    position: absolute;
-        top: 45%;
-        left: 50%;
-         margin-top: 42px;
-        margin-right: -50%;
-        transform: translate(-50%, -50%)
-}
-
-div {
-    display: block;
-}
-section {
-        background: white;
-        color: black;
-        border-radius: 0em;
-        padding: 1em;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-         margin-top: 42px;
-        margin-right: -50%;
-        transform: translate(-50%, -50%)
-         }</style>
-	<div flex layout="column" tabIndex="-1" role="main"
+<link rel="stylesheet" href="./src/schoolSignup/view/schoolSignup.css">
+<div flex layout="column" tabIndex="-1" role="main"
 	ng-controller="schoolSignupCtrl as ul" class="md-whiteframe-z2"
 	ng-init="ul.load()">
-	 <div class="login-content ng-scope" >
-
-            
-        <div class="lc-block ng-scope toggled">
-	
-          	<form name="signUpForm">
-          		<div layout="column">
-          		<div layout="row">
-      	 <span>
-          		<md-icon md-svg-icon="school_black"> </md-icon></span>
-         <label>School Details</label> 
-         </div> 	
+	<div class="login-content ng-scope" >
+    <div class="lc-block ng-scope toggled">
+      <form name="signUpForm">  
+        <div layout="column">
+	         <div layout="row">
+          	 	<span>
+          		  <md-icon md-svg-icon="school_black"> 
+                </md-icon>
+              </span>
+              <label><b>School Details</b></label> 
+         	 </div>
+         	 <md-card layout="row" id="card">
 	          		<md-input-container>
-				<label>School Name</label>  
-  			 <input name="schoolName" ng-model="schoolName" required >
-  			 <span style="color:red" ng-show="signUpForm.schoolName.$dirty && signUpForm.schoolName.$invalid">
-    	 <span ng-show="signUpForm.schoolName.$error.required" class="help-block"> school Name is required.</span></span>
-  			 
-    	</md-input-container>
-    	
-					 <md-input-container>
-		<label>School Location</label>  
-  			 <input name="schoolLocation" ng-model="schoolLocation" required >
-  			 <span style="color:red" ng-show="signUpForm.schoolLocation.$dirty && signUpForm.schoolLocation.$invalid">
-    	 <span ng-show="signUpForm.schoolLocation.$error.required" class="help-block">Location is required.</span></span>
-  			 
-    	</md-input-container>
-    	
-    	</div>
-    	<div layout="row">
-    	<span>
+				          <label>School Name</label>  
+  			           <input name="schoolName" ng-model="schoolName" required size="31">
+  			           <spanstyle="color:red" ng-show="signUpForm.schoolName.$dirty && signUpForm.schoolName.$invalid">
+    	             <span ng-show="signUpForm.schoolName.$error.required" class="help-block"> school Name is required.</span></span>
+  			         </md-input-container>
+    	           <md-input-container>
+		                <label>School Location</label>  
+  			            <input name="schoolLocation" ng-model="schoolLocation" required size="31">
+  			            <span style="color:red" ng-show="signUpForm.schoolLocation.$dirty && signUpForm.schoolLocation.$invalid">
+    	              <span ng-show="signUpForm.schoolLocation.$error.required" class="help-block">Location is required.</span></span>
+  			         </md-input-container>
+    	     </md-card>
+         	 <div layout="row" id="head">
+    	       <span>
           		<md-icon md-svg-icon="person_black"> </md-icon></span>
-    	 <label>User Details</label>
-    	 </div>  		
-    	<div layout="row" layout-align="start center">
-    	  
-    		<md-input-container>
-				<label>First Name</label>  
-  			 <input name="firstName" ng-model="firstName" required >
-  			 <span style="color:red" ng-show="signUpForm.firstName.$dirty && signUpForm.firstName.$invalid">
-    	 <span ng-show="signUpForm.firstName.$error.required" class="help-block">first name is required.</span></span>
-  			 
-    	</md-input-container>
-    	<md-input-container>
-				<label>Middle Name</label>  
-  			 <input name="middleName" ng-model="middleName" required >
-  			 <span style="color:red" ng-show="signUpForm.middleName.$dirty && signUpForm.middleName.$invalid">
-    	 <span ng-show="signUpForm.middleName.$error.required" class="help-block">middle name is required.</span></span>
-  			 
-    	</md-input-container>
-    	
-    		<md-input-container>
-				<label>Last Name</label>  
-  			 <input name="lastName" ng-model="lastName" required >
-  			 <span style="color:red" ng-show="signUpForm.lastName.$dirty && signUpForm.lastName.$invalid">
-    	 <span ng-show="signUpForm.lastName.$error.required" class="help-block">last name is required.</span></span>
-  			 
-    	</md-input-container>
-    	</div>
-    		<div layout="row" layout-align="start center">
-    		<md-input-container>
-				<label>Contact No</label>  
-  			 <input type="number" name="contactNo" ng-model="contactNo" required >
-  			 <span style="color:red" ng-show="signUpForm.contactNo.$dirty && signUpForm.contactNo.$invalid">
-    	<span class="help-block" ng-show="signUpForm.contactNo.$error.required && signUpForm.contactNo.$error.number">Valid phone number is required</span>
-      <span class="help-block" ng-show="((signUpForm.contactNo.$error.minlength ||signUpForm.contactNo.$error.maxlength)) ">phone number should be 10 digits</span>
-    </span>
-    
-  	 
-    	</md-input-container>
-    	
-    		<md-input-container>
-				<label>Email Id</label>  
-  			 <input name="emailId" ng-model="emailId" type="email" required >
-  			  <span style="color:red" ng-show="signUpForm.emailId.$dirty && signUpForm.emailId.$invalid">
-  <span ng-show="signUpForm.emailId.$error.required">Email is required.</span>
-  <span ng-show="signUpForm.emailId.$error.email">Invalid email address.</span>
-  </span>
-    	</md-input-container>
-          		</div>          		
-          <!-- div layout="row" layout-align="start center">
-	        <md-button class="md-raised md-primary" ng-click="gotoNewLogin()"> Register </md-button>
-	          	<md-button class="md-raised md-primary"  ng-click="cancel()"> Cancel </md-button>
-	          	
-	         </div-->
-	         <div layout="row" layout-align="start center">
-	          <md-input-container>
-	<label>Password</label>  
-  			 <input name="pass" ng-model="pass" type="password" required size="20">
-  			 <span style="color:red" ng-show="signUpForm.pass.$dirty && signUpForm.pass.$touched && signUpForm.pass.$invalid">
-    	  <span ng-show="signUpForm.pass.$error.required" class="help-block">Password is required.</span></span>
- 
-    	</md-input-container>
-	<md-input-container>
-	<label>Reenter Password</label>  
-  			 <input name="rePass" ng-model="rePass" type="password" required size="20">
-  			 <span style="color:red" ng-show="signUpForm.rePass.$dirty && signUpForm.rePass.$touched && signUpForm.rePass.$invalid">
-    	  <span ng-show="signUpForm.rePass.$error.required" class="help-block">Password is required.</span></span>
- 
-    	</md-input-container>
-	         </div>
-	         	<div layout="row">
-      	 <span>
-          		<md-icon md-svg-icon="school_black"> </md-icon></span>
-         <label>Available Package</label> 
-         </div> 	
-         	<div layout="row" layout-align="start center" >
-	       
-	        <md-button id="gold"> Gold</md-button>
-	          	<md-button id="platinum">Platinum</md-button>
-	          	<md-button id="platinump">Platinum plus</md-button>
-	          	 </div>
-          		</form>
-	        
-	    </div>
+    	         <label><b>User Details</b></label>
+    	     </div>
+         	<md-card layout="row" id="card">
+    		    <md-input-container>
+				      <label>First Name</label>  
+  			      <input name="firstName" ng-model="firstName" required size="31">
+  			      <span style="color:red" ng-show="signUpForm.firstName.$dirty && signUpForm.firstName.$invalid">
+    	        <span ng-show="signUpForm.firstName.$error.required" class="help-block">first name is required.</span></span>
+  			   </md-input-container>
+    	     <md-input-container>
+				     <label>Middle Name</label>  
+  			     <input name="middleName" ng-model="middleName" required size="31">
+  			     <span style="color:red" ng-show="signUpForm.middleName.$dirty && signUpForm.middleName.$invalid">
+    	       <span ng-show="signUpForm.middleName.$error.required" class="help-block">middle name is required.</span></span>
+  			   </md-input-container>
+    	     <md-input-container>
+				     <label>Last Name</label>  
+  			     <input name="lastName" ng-model="lastName" required size="31">
+  			     <span style="color:red" ng-show="signUpForm.lastName.$dirty && signUpForm.lastName.$invalid">
+    	       <span ng-show="signUpForm.lastName.$error.required" class="help-block">last name is required.</span></span>
+  			   </md-input-container>
+    	    </md-card>
+         	<md-card layout="row" id="card">
+         	 <md-input-container>
+				     <label>Email Id</label>  
+  			     <input name="emailId" ng-model="emailId" type="email" required size="31" >
+  			     <span style="color:red" ng-show="signUpForm.emailId.$dirty && signUpForm.emailId.$invalid">
+             <span ng-show="signUpForm.emailId.$error.required">Email is required.</span>
+             <span ng-show="signUpForm.emailId.$error.email">Invalid email address.</span>
+             </span>
+    	     </md-input-container>
+    		   <md-input-container>
+				     <label>Contact No</label>  
+  			     <input type="number" name="contactNo" ng-model="contactNo" required size="31" id="contact">
+  			     <span style="color:red" ng-show="signUpForm.contactNo.$dirty && signUpForm.contactNo.$invalid">
+    	       <span class="help-block" ng-show="signUpForm.contactNo.$error.required && signUpForm.contactNo.$error.number">Valid phone number is required</span>
+             <span class="help-block" ng-show="((signUpForm.contactNo.$error.minlength ||signUpForm.contactNo.$error.maxlength)) ">phone number should be 10 digits</span>
+            </span>
+           </md-input-container>
+    	    </md-card>
+         	<md-card layout="row" id="card"> 		
+            <md-input-container>
+	            <label>Password</label>  
+  			      <input name="pass" ng-keyup="checkPass()" ng-model="pass" type="password"   required size="31" >
+  			      <span style="color:red" ng-show="signUpForm.pass.$dirty && signUpForm.pass.$touched && signUpForm.pass.$invalid">
+    	        <span class="help-block" ng-show="signUpForm.pass.$error.required">Password is required.</span></span>
+            </md-input-container>
+            <md-input-container>
+	            <label>Reenter Password</label>  
+	            <input name="rePass"ng-keyup="checkPass()" ng-model="rePass" type="password" required size="31"> 
+            </md-input-container>
+          <span ng-show="error">{{error}}</span>
+         </md-card>
+	      <div layout="row" id="package" id="card">
+	        <span>
+          <md-icon md-svg-icon="school_black"> </md-icon></span>
+         <label><b>Available Package</b></label> 
+      </div>
+         <div layout="row" id="packagefontsize">
+           <div class="col-sm-4">
+             <md-card>
+               <div class="card" >
+                <div class="card-header bgm-orange" id="textcolor">
+                  <label>Gold</label><label>  [Total:{{gold}}Rs.]</label></div>
+	                  <div class="card-body card-padding" layout="column">
+	                    <div ng-repeat="message1 in messages1">
+	                    <md-checkbox  ng-model="message1.checked" ng-change="sum(message1,'gold')" >
+	                    {{ message1.title }} 
+                      </md-checkbox>
+                      </div>        
+                    </div>
+                 </div>  
+   	         </md-card>     
+           </div>
+           <div class="col-sm-4">
+            <md-card>
+               <div class="card">
+                <div class="card-header bgm-green" id="textcolor">
+                    <label>Platinum</label><label>  [Total:{{platinum}}Rs.]</label></div>
+                     <div class="card-body card-padding" layout="column">
+                       <div ng-repeat="message2 in messages2">
+	                     <md-checkbox  ng-model="message2.checked" ng-change="sum(message2,'platinum')" >
+	                     {{ message2.title }} 
+                       </md-checkbox>
+                      </div> 
+                </div>
+              </div>
+            </md-card>
+          </div> 
+          <div class="col-sm-4">
+             <md-card>
+	             <div class="card">
+                <div class="card-header bgm-red" id="textcolor">
+                    <label>Platinum Plus</label> <label>  [Total:{{platinump}}Rs.]</label> </div>
+                    <div class="card-body card-padding">
+                     <div ng-repeat="message3 in messages3">
+	                     <md-checkbox  ng-model="message3.checked" ng-change="sum(message3,'platinump')" >
+	                      {{ message3.title }} 
+                        </md-checkbox>
+                     </div> 
+                    </div>
+                </div> 
+             </md-card> 
+          </div>  
+        </div>
+	     </div>     
+     </form>
+	 </div>          
 	</div>    
-	</div>
+</div>

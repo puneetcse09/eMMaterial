@@ -5,7 +5,19 @@
        .controller('emHomeCtrl', [
           'emHomeService', '$mdSidenav', '$mdBottomSheet', '$log','$scope', '$q' ,'$state', '$stateParams',
           EmHomeCtrl
-       ]);
+       ]).directive( 'appHeader', function() {
+  return {
+     restrict: 'E',
+     
+       templateUrl: "/src/navBar/view/navBar.html"
+  };
+}).directive( 'appFooter', function() {
+  return {
+     restrict: 'E',
+     
+       templateUrl: "/src/addFooter/view/addFooter.html"
+  };
+});
 
   function  EmHomeCtrl( EmHomeService, $mdSidenav, $mdBottomSheet, $log,$scope, $q, $state, $stateParams) {
     var self = this;

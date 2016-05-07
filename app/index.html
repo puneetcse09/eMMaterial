@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="./src/navbar/view/navBar.css">
 <link rel="stylesheet" href="./src/emHome/view/emHome.css">
 
+
 <link rel='stylesheet' href="assets/css/fonts.css">
 <!-- <link rel='stylesheet'
 	href="assets/css/notificationCss/notification.css">
@@ -34,7 +35,10 @@
 			md-svg-src="assets/icons/ic_add_white_48px.svg"></md-icon> </md-button> 
 			 -->
 		<!-- ADD BUTTON - END -->
-		<div ng-include="'src/navbar/view/navBar.html'"></div>
+		<app-header></app-header>
+		<app-footer></app-footer>
+		<!--div ng-include="'src/navbar/view/navBar.html'"></div>
+	<div ng-include="'src/addFooter/view/addFooter.html'"></div-->
 	
 		
 		<!-- <div notifications="bottom right"></div> -->
@@ -69,6 +73,11 @@
 	<script src="./src/navbar/navBar.js"></script>
 	<script src="./src/navbar/navBarController.js"></script>
 	<script src="./src/navbar/navBarService.js"></script>
+	
+	<script src="./src/addFooter/addFooter.js"></script>
+	<script src="./src/addFooter/addFooterCtrl.js"></script>
+	<script src="./src/addFooter/addFooterService.js"></script>
+	
 	
 	<script src="./src/emHome/emHome.js"></script>
 	<script src="./src/emHome/emHomeCtrl.js"></script>

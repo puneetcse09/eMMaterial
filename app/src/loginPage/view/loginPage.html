@@ -1,76 +1,59 @@
 <link rel="stylesheet" href="./src/loginPage/view/loginPage.css">
-<div flex layout="column" tabIndex="-1" role="main"
+   <div flex layout="column" tabIndex="-1" role="main"
 	ng-controller="loginPageCtrl as ul" class="md-whiteframe-z2"
 	ng-init="ul.load()">
-	
-	
-<div class="login-content ng-scope" >
-
-            
+	  <div class="login-content ng-scope" >
         <div class="lc-block ng-scope toggled">
-         <form id="loginForm">
-         <div layout="column" >
-         
-          <div layout="row" >
-          		<span>
-          		<md-icon md-svg-icon="person_black"> </md-icon></span>
-          
-		<md-input-container>
+          <form id="loginForm">
+            <div layout="column" >
+              <div layout="row" >
+          		  <span><md-icon md-svg-icon="person_black"> </md-icon></span>
+                  <md-input-container>
 				
-  			 <input name="userName" ng-model="userName" required size="45" placeholder="UserName">
-  			  <span style="color:red" ng-show="loginForm.userName.$dirty &&loginForm.userName.$touched && loginForm.userName.$invalid">
-    	 <span ng-show="loginForm.userName.$error.required" class="help-block">User name is required.</span></span>
+  			             <input name="userName" ng-model="userName" required size="45" placeholder="UserName">
+  			                <span style="color:red" ng-show="loginForm.userName.$dirty
+                        &&loginForm.userName.$touched && loginForm.userName.$invalid">
+    	                     <span ng-show="loginForm.userName.$error.required" class="help-block">User name is required.
+                           </span>
+                        </span>
   			 
-    	</md-input-container>
-		
-	      
-	       </div> 
-	      <div layout="row" >
-    	<span>
-    	<md-icon md-svg-icon="access_black"> </md-icon></span>	
-	 <md-input-container>
-	<label>Password</label>  
-  			 <input name="pass" ng-model="pass" type="password" required size="45">
-  			 <span style="color:red" ng-show="loginForm.pass.$dirty && loginForm.pass.$touched && loginForm.pass.$invalid">
-    	  <span ng-show="loginForm.pass.$error.required" class="help-block">Password is required.</span></span>
+    	             </md-input-container>
+		           </div> 
+	             <div layout="row" >
+    	           <span>
+                    <md-icon md-svg-icon="access_black"> 
+                    </md-icon>
+                  </span>	
+	               <md-input-container>
+	                 <label>Password</label>  
+  			           <input name="pass" ng-model="pass" type="password" required size="45">
+  			           <span style="color:red" ng-show="loginForm.pass.$dirty && loginForm.pass.$touched && loginForm.pass.$invalid">
+    	                <span ng-show="loginForm.pass.$error.required" class="help-block">Password is required.
+                      </span>
+                    </span>
  
-    	</md-input-container>
-	
-				
-    	
-	</div>
-	<div layout="row" >
-    	<span ng-show="error">{{error}}</span>
-    	 </div>
-    	 <div layout="row">
-    	  <!-- a ng-click="login(userName, pass)">Login</a-->
-          <!-- a ng-click="forgotPass()">Forgot Password</a-->	
-         <!-- a ng-click="forgotPass()">Forgot Password</a-->	
-    <label for="keepMe">
-            <input id="keepMe" type="checkbox" ng-model="keepMe" class="ng-valid ng-dirty ng-valid-parse ng-touched">
-        </label>
-<a ng-click="rememberPass()">Keep me signed in</a>
- </div>
-         
-    
-        <md-button class="md-fab md-fab-bottom-right" >
-         <md-icon id=arrow md-svg-icon="arrow_white" ng-click="login(userName, pass)"><md-tooltip>Click to login</md-tooltip> </md-icon>
-    </md-button>	
-       	<div layout="row" layout-align="start center" >
-	       
-	        <md-button id="reg" ng-click="gotoSchoolSignup()"> Register</md-button>
-	          	<md-button id="forgot" ng-click="forgotPass()">Forgot Password</md-button>
-	          	 </div>
+    	           </md-input-container>
+	             </div>
+	             <div layout="row" >
+    	             <span ng-show="error">{{error}}</span>
+    	         </div>
+    	         <div layout="row"layout-align="start center">
+    	             <md-checkbox>Keep me signed in</md-checkbox>
+               </div>
+             <md-button class="md-fab md-fab-bottom-right" >
+               <md-icon id=arrow md-svg-icon="arrow_white" ng-click="login(userName, pass)"><md-tooltip>Click to login</md-tooltip> </md-icon>
+              </md-button>	
+       	        <div layout="row" layout-align="start center" >
+	                  <md-button id="reg" ng-click="gotoSchoolSignup()"> Register
+                     </md-button>
+	          	      <md-button id="forgot" ng-click="forgotPass()">Forgot Password
+                     </md-button>
+	          	   </div>
+	             </div>
+	       </form>
 	     </div>
-	      <!-- div layout="row" layout-align="start center" >
-	       
-	        <md-button ng-click="login(userName, pass)" class="md-raised  md-primary" > Login </md-button>
-	          	<md-button class="md-raised md-primary"> Cancel </md-button>
-	          	 </div>
-	     </div-->
-	     </form>
-	       </div>
-	
+	  </div>
+  </div>
 
 
 
@@ -81,8 +64,4 @@
 
 
 
-      </div>
-   
       
-           
-     </div>

@@ -1,0 +1,39 @@
+<style>
+footer {
+
+      width: 97%;
+    height: 17px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;	
+}
+#label
+{
+text-align:center;
+}
+md-bottom-sheet {
+top:83%;
+    padding: 0px 0px 0px;
+     width:98%;
+height:2px;
+ }
+#row
+{
+      margin: 0px;
+box-shadow: none;
+}
+</style>
+
+<div ng-controller="addFooterCtrl as nv" id="footer"
+ng-init="nv.load()">
+
+  <md-bottom-sheet>
+    <footer>
+       <md-card id="row"layout="row" layout-align="center center">
+        <label id="label">
+        	<b>&copy; 2016 Niograph Technology Consulting (India) LLP. All Rights Reserved.
+ 			</b> 
+ 		</label>
+       </md-card>
+    </footer>
+   </md-bottom-sheet>
+</div>

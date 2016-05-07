@@ -1,59 +1,75 @@
+<style>
+#but {
+    border-radius: 1px;
+    box-sizing: border-box;
+    color: white;
+   outline: 2px;
+    border: 0;
+    display: inline-block;
+    margin: 6px 8px;
+    line-height: 26px;
+    min-height: 31px;
+      background:#3333FF;
+   min-width: 66px;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 13px;
+    
+   }
+   #button {
+    border-radius: 15px;
+
+    color: #fff;
+    display: inline-block;
+    
+    margin: 6px 8px;
+    line-height: 43px;
+    min-height: 26px;
+    background:#3333FF;
+   font-size: 13px;
+    min-width: 46px;
+  
+    text-align: center;
+    text-transform: capitalize;
+    }
+#toolbar {
+      background:#3399ff;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    font-size: 20px;
+    min-height: 10px;
+    height: 50px;
+    width: 100%;
+     max-height: 60px
+    transition: all .5s cubic-bezier(.35,0,.25,1);
+    transition-property: background-color,fill,color;
+}
+</style>
 <div ng-controller="navBarController as nv" id="header"
 ng-init="nv.load()">
-<md-toolbar>
-	<div class="md-toolbar-tools">
- 	 <h1 style="color: white; font-weight: bold;" class="cursor-pointer"><span ui-sref="emHome"> eM </span></h1> 
-		<!-- <span ui-sref="emHome" class="cursor-pointer">
-			<img src="assets/images/em1.png" alt="user avatar">
-		</span>  -->
+   <md-toolbar id="toolbar">
+	   <div class="md-toolbar-tools">
+ 	      <span ui-sref="emHome" class="cursor-pointer">
+          <img src="assets/images/em1.png" alt="user avatar">
+		    </span> 
         <span flex></span>
         <span flex></span>
         <md-button id="but" ng-click="gotoLoginHome()">Login
-         	<md-tooltip>Click to login</md-tooltip>
+         <md-tooltip>Click to login</md-tooltip>
         </md-button>
-		<md-button id="but" ng-click="gotoSchoolSignup()">Register
+		    <md-button id="but" ng-click="gotoSchoolSignup()">Register
          	<md-tooltip>Click to register school details</md-tooltip>
         </md-button>
-          <!-- span flex></span>
-         <h1 style="color: white; font-weight: bold;" class="cursor-pointer"><span> <img src="assets/images/em1.png" alt="user avatar"> </span></h1>
-        <span flex></span>
-         <md-button ng-click="gotoLoginHome()">Login
-         	<md-tooltip>Click to login</md-tooltip>
-         </md-button-->
-       
-       <!-- <md-button ng-click="showAddSchoolSignupDialog($event)">School Signup
-       		<md-tooltip>Click to Signup for school</md-tooltip>
-       	</md-button> -->
-   </div>
-</md-toolbar>
-  <!-- <md-toolbar layout="row" class="md-whiteframe-z1">
-      h1 style="color: white; font-weight: bold;" class="cursor-pointer"><span> eM </span></h1>
-	<main class='md-padding' layout="row" flex>
-	
-        <div flex>	
-       
-         <div layout="row" layout-align="end center">
-	 <img src="assets/images/em1.png" alt="user avatar"> 
-	 
-	    	<md-card-actions>
-     <md-button ng-click="gotoLoginHome()">Login</md-button>
-     	</md-card-actions>	
- 	
-     	
-     	div ng-controller="schoolSignupCtrl">
-     	<md-card-actions>		
-		<md-button ng-click="showAddSchoolSignupDialog($event)">School Signup</md-button>
-			</md-card-actions>				
-     </div
      </div>
-     		</div>
-		
-
-      
- 
-</main>
- </md-toolbar> -->
-	
-</div>			
+   </md-toolbar>
+ </div>			
 
 
