@@ -24,20 +24,12 @@
 
     self.load         = load;
 
-    
-    /**
-     * Load function to initialize the current template with default services
-     */
     function load(){
    
     	$log.info("Inside load of EmHomeCtrl ");
 
     }
 
-    
-      
-   
-
-  }
+    }
 
 })();

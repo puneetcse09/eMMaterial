@@ -51,6 +51,11 @@
    			 $state.go('schoolSignup');
    			
    		 };
+   		$scope.gotoUserAdmin = function (){
+   	   		
+  			 $state.go('userAdmin');
+  			
+  		 };
 
       $scope.rememberPass = function () {
           if ($scope.keepMe) {

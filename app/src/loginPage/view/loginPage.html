@@ -2,6 +2,7 @@
    <div flex layout="column" tabIndex="-1" role="main"
 	ng-controller="loginPageCtrl as ul" class="md-whiteframe-z2"
 	ng-init="ul.load()">
+ <app-header></app-header>
 	  <div class="login-content ng-scope" >
         <div class="lc-block ng-scope toggled">
           <form id="loginForm">
@@ -41,7 +42,7 @@
     	             <md-checkbox>Keep me signed in</md-checkbox>
                </div>
              <md-button class="md-fab md-fab-bottom-right" >
-               <md-icon id=arrow md-svg-icon="arrow_white" ng-click="login(userName, pass)"><md-tooltip>Click to login</md-tooltip> </md-icon>
+               <md-icon id=arrow md-svg-icon="arrow_white" ng-click="gotoUserAdmin()"><md-tooltip>Click to login</md-tooltip> </md-icon>
               </md-button>	
        	        <div layout="row" layout-align="start center" >
 	                  <md-button id="reg" ng-click="gotoSchoolSignup()"> Register

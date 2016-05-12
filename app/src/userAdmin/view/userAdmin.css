@@ -1,0 +1,177 @@
+select{
+  width:100%
+   height: 100%;
+
+           background:none;
+               color:white;
+}
+#profileinfo
+{
+      background: rgba(0, 0, 0, 0.37);
+    padding: 7px 14px;
+    color: #fff;
+    margin-top: 20px;
+    position: relative;
+}
+#userinfo
+{
+  display: block;
+    height: 129px;
+    margin-bottom: 5px;
+    width: 100%;
+   font-size: 13px;
+    background-size: 100%;
+}
+#userprofile
+{
+  display: block;
+    height: 129px;
+    margin-bottom: 5px;
+    width: 100%;
+   
+    background-size: 100%;
+}
+.profilepic > img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 13px solid rgba(0, 0, 0, 0);
+    box-sizing: content-box;
+}
+._md-sidenav-backdrop.md-opaque
+{
+opacity: 0;
+}
+#userlist {
+     padding: 10px;
+     color:black;
+}       
+#icon
+{
+   padding: 15px;
+    margin: 0px 0px;
+    line-height: 26px;
+    min-height: 26px;
+    
+    min-width: 26px;
+}
+ .md-button.dropdown {
+  overflow: visible; /*reset*/
+}
+
+.dropdown .dropdown-menu {
+  max-width: 0;
+  position: absolute;
+  left: 40px;
+  top: 100%;
+  margin: 0;
+  padding: 40px;
+  opacity: 0;
+  overflow: hidden;
+  background-color: #fff;
+  list-style: none;
+  transition: min-width 0.2s ease-in-out, left 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.dropdown .dropdown-menu .md-button {
+  min-width: 100%;
+  border-radius: 0;
+  margin: 0;
+  padding: 6px 16px;
+}
+
+.dropdown.active .dropdown-menu {
+  max-width: 300px; /* set a maxwidth bigger than the widest element */
+  left: 0;
+  opacity: 1;
+}
+ 
+.fa {
+
+   padding: 13px;
+}
+
+.login-content:before {
+    height: 53%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: skyblue;
+    content: "";
+    z-index: 0;
+}
+#font{
+        font-size: 16px;
+    }
+#toolbar1 {
+ 
+      background:white;
+    box-sizing: border-box;
+   
+    font-size: 20px;
+    min-height: 10px;
+    height: 60px;
+    width: 100%;
+     max-height: 60px
+  position: absolute;
+}
+
+ #toolbar {
+      background:#3399ff;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+    font-size: 20px;
+    min-height: 10px;
+    height: 60px;
+    width: 100%;
+     max-height: 60px
+    transition: all .5s cubic-bezier(.35,0,.25,1);
+    transition-property: background-color,fill,color;
+}
+
+md-content {
+    height: 75%;
+}
+.md-sidenav-left, md-sidenav {
+    left: 0;
+    top: 9.4%;
+     height: 87%;
+   width:28%;
+    transform: translate3d(0,0,0);
+}
+.md-sidenav-right
+{
+    width:30%;
+    top: 9.4%;
+  left:100%;
+     height: 87%;
+  transform: translate3d(-100%,0,0);
+}
+
+.line-wrap {
+    width: 18px;
+    height: 12px;
+   transition: all;
+transition-duration: 300ms;
+    margin: 12px 20px;
+}
+.line-wrap .line {
+    width: 18px;
+    height: 2px;
+   transition: all;
+   transition-duration: 300ms;
+}
+.line-wrap .line {
+    background-color: #fff;
+}
+.line-wrap .line.center {
+    margin: 3px 0;
+}
