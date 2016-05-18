@@ -1,8 +1,6 @@
 (function(){
-agGrid.initialiseAgGridWithAngular1(angular);
-
   angular
-       .module('loginHome', ['agGrid'])
+       .module('loginHome')
        .controller('loginHomeCtrl', [
           'loginHomeService', '$mdSidenav', '$mdBottomSheet', '$log','$scope', '$q' ,'$state', '$stateParams','$window',
           LoginHomeCtrl
