@@ -15,7 +15,6 @@
     "angular-ui-router": "0.2.10",
     "moment": "~2.8.4",
     "angular-bootstrap": "latest",
-    "ag-grid": "~2.3.5",
     "angular-material-icons": "~0.6.0"
      },
   "devDependencies": {

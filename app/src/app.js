@@ -1,5 +1,5 @@
 var myapp = angular.module('starterApp', 
-		[ 'ng', 'ngMaterial', 'ngMdIcons', "ngAnimate", "ngAria",'ui.router',
+		[ 'ng', 'ngMaterial', 'ngMdIcons', "ngAnimate", "ngAria",'ui.router','angularGrid',
 		  'sideNavBar','userAdmin','navBar','emHome','loginPage','loginHome','schoolSignup','addFooter',
 		   'ngAutocomplete'])
 		  .run(
