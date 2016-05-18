@@ -1,40 +1,20 @@
 <link rel="stylesheet" href="./src/emHome/view/emHome.css">
-<div ng-controller="emHomeCtrl as ca" layout="column" ng-cloak=""
+<div ng-controller="emHomeCtrl as ca"  ng-cloak=""
 	class="md-inline-form" ng-init="ca.load()" >
 	<app-header></app-header>
 <div class="login-content ng-scope" >
-<div layout-xs="column" layout="row" style="font-family: roboto;
-  font-size: 13px;
-  line-height: 1.42857143;
-  color: #5e5e5e;
-  background-color: #edecec;
-  height: 100%">
- 
-  <div flex-xs flex-gt-xs="100" layout="column">
-  	<md-card id="center">
-  		<md-card-title> 
-			<md-card-title-text>
-				<span class="md-headline"></span> 
-			</md-card-title-text> 
-			</md-card-title> 
-			<md-card-content>
-				<div layout-gt-sm="row">
-				
-        		</div>
-        		<div layout-gt-sm="row">
-          			
-        		</div>
-        	</md-card-content> 
+<div layout="column">
+  	<md-card id="center" >
+  	<md-card-title>
+  	 <md-button ng-click="gotoLoginHome()">Login
+         <md-tooltip>Click to login</md-tooltip>
+        </md-button>
+  	 </md-card-title> 
+  		
 		</md-card>
-	</div>
+	
 </div>
-<div layout-xs="column" layout="row" style="font-family: roboto;
-  font-size: 13px;
-  line-height: 1.42857143;
-  color: #5e5e5e;
-  background-color: #edecec;
-  height: 100%">
-	<div flex-xs flex-gt-xs="100" layout="column">
+<div layout="column">
   		<md-card id="customer">
   			<md-card-title> 
 				 <md-card-title-text>
@@ -43,7 +23,7 @@
 			</md-card-title> 
 			<md-card-content>
 			<div layout="row">-----------------------------------</div>
-				<div layout-gt-sm="row">
+				<div layout="row">
 					<div class="md-media-sm card-media">
             		<img
 						src="assets/images/1.gif" class="md-card-image"
@@ -63,7 +43,9 @@
 			</md-card-content> 
 		</md-card>
 	</div>
-</div>
+
+
+
 </div> 
    
 

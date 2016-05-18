@@ -1,3 +1,35 @@
+@media only screen and (max-width:700px)
+{
+    .lc-block:not(.lcb-alt) 
+    {
+     padding: 35px 0px 0px !important;
+    }
+}
+@media only screen and (max-width:700px)
+{
+.lc-block{
+   
+   right: 5% !important;
+      left: 50% !important;
+        margin-right: -10% !important;
+    }
+
+}
+@media only screen and (max-width:425px)
+{
+#forgot {
+    
+   font-size: 8px !important;
+}
+}
+@media only screen and (max-width:425px)
+{
+#reg {
+    
+    font-size: 8px !important;
+}
+}
+
 md-checkbox ._md-icon {
    
     left: 35px;

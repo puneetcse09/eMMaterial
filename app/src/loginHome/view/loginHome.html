@@ -1,121 +1,15 @@
-<!-- <link rel="stylesheet" href="./src/loginHome/view/loginHome.css">-->
- <<style>
-<!--
+<link rel="stylesheet" href="./src/loginHome/view/loginHome.css">
+<div tabIndex="-1" role="main"
+  ng-controller="loginHomeCtrl as ul" class="md-whiteframe-z2"
+  ng-init="ul.load()">
 
--->
-* {
-  box-sizing: border-box;
-}
-
-section {
-        background: #CCFFFF;
-        color: black;
-        border-radius: 0em;
-        padding: 1em;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-         margin-top: 42px;
-        margin-right: -50%;
-        transform: translate(-50%, -50%)
-         }
-md-input-container {
+   <div class="login-content ng-scope" >
    
-    padding: 0px;
-    margin: 0px;
-    vertical-align: middle;
-}
-md-icon {
-    margin: auto;
-    background-repeat: no-repeat no-repeat;
-    display: inline-block;
-    vertical-align: middle;
-    fill: currentColor;
-    height: 14px;
-    width: 14px;
-}
-a:not(.md-button) {
-    color:black;
-}
-.lc-block:not(.lcb-alt) {
-    padding: 30px 75px 0px;
-}
-
-/*.lc-block {
-    background: #fff;
-    box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
-    border-radius: 2px;
-    width: 500px;
-    display: inline-block;
-    margin-top: 42px;
-    vertical-align: middle;
-    position: relative;
-}
-*/
-</style>
- <div id="loginHomeContainer" tabIndex="-1" role="main"
-	ng-controller="loginHomeCtrl as ca" class="md-whiteframe-z2"
-	ng-init="ca.load()">
-
-
-         <section>
-         <div class="lc-block" >
-         <div layout="column" >
-         
-          <div layout="row" >
-          		<span>
-          		<md-icon md-svg-icon="person_black" > </md-icon></span>
-          
-		<md-input-container>
-				
-  			 <input name="userName" ng-model="userName" required size="45" placeholder="UserName">
-  			  <span style="color:red" ng-show="loginForm.userName.$dirty &&loginForm.userName.$touched && loginForm.userName.$invalid">
-    	 <span ng-show="loginForm.userName.$error.required" class="help-block">User name is required.</span></span>
-  			 
-    	</md-input-container>
-		
-	      
-	       </div> 
-	      <div layout="row" >
-    	<span>
-    	<md-icon md-svg-icon="access_black"> </md-icon></span>	
-	 <md-input-container>
-	<label>Password</label>  
-  			 <input name="pass" ng-model="pass" type="password" required size="45">
-  			 <span style="color:red" ng-show="loginForm.pass.$dirty && loginForm.pass.$touched && loginForm.pass.$invalid">
-    	  <span ng-show="loginForm.pass.$error.required" class="help-block">Password is required.</span></span>
- 
-    	</md-input-container>
-	
-				
-    	
-	</div>
-	<div layout="row" >
-    	<span ng-show="error">{{error}}</span>
-    	 </div>
-    	 <div layout="row">
-          <!-- a ng-click="forgotPass()">Forgot Password</a-->	
         
-    <label for="remember">
-            <input id="rememberMe" type="checkbox" ng-model="rememberMe" class="ng-valid ng-dirty ng-valid-parse ng-touched">
-        </label>
-<a ng-click="rememberPass()">Remember Me</a>
- </div>
-          	
-       	   
-         	
-	      <div layout="row" layout-align="start center" >
-	       
-	        <md-button ng-click="login(userName, pass)" class="md-raised  md-primary" > Login </md-button>
-	          	<md-button class="md-raised md-primary"> Cancel </md-button>
-	          	 </div>
-	     </div>
-	     
-	       </div>
-	</section>
-	</div>
-	     
-   
+<div ag-grid="gridOptions" class="ag-fresh" style="height: 100%;"></div>
 
-	
+
+  </div>
+ </div> 
  
+

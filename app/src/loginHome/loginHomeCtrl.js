@@ -1,7 +1,8 @@
 (function(){
+agGrid.initialiseAgGridWithAngular1(angular);
 
   angular
-       .module('loginHome')
+       .module('loginHome', ['agGrid'])
        .controller('loginHomeCtrl', [
           'loginHomeService', '$mdSidenav', '$mdBottomSheet', '$log','$scope', '$q' ,'$state', '$stateParams','$window',
           LoginHomeCtrl
@@ -12,19 +13,31 @@
 
     self.load         = load;
 
-    
-    /**
-     * Load function to initialize the current template with default services
-     */
     function load(){
     
     	$log.info("Inside load of captureApplicationCtrl ");
     
-    	
-    	   
+    	  var columnDefs = [
+        {headerName: "Make", field: "make"},
+        {headerName: "Model", field: "model"},
+        {headerName: "Price", field: "price"}
+    ];
+
+    var rowData = [
+        {make: "Toyota", model: "Celica", price: 35000},
+        {make: "Ford", model: "Mondeo", price: 32000},
+        {make: "Porsche", model: "Boxter", price: 72000}
+    ];
+ $scope.gridOptions = {
+        columnDefs: columnDefs,
+        rowData: rowData
+    };
+    	 
     	     
     	     
     }
+
+  
     $scope.forgotPass = function () {
      	 $window.alert(" Password :abc");
      	
@@ -50,6 +63,7 @@
              $window.alert("CheckBox is not checked.");
          }
      };  
+
     
     
 

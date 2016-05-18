@@ -29,6 +29,11 @@
     	$log.info("Inside load of EmHomeCtrl ");
 
     }
+    $scope.gotoLoginHome = function () {
+    $log.debug("In gotoLoginHome  : ");
+      $state.go('loginHome');
+    
+   };
 
     }
 
