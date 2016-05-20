@@ -18,5 +18,15 @@ height:2px;
  }
 #row
 {
+	
 box-shadow: none;
+}
+#license-footer
+{
+    align-self: flex-end;
+    padding: 16px 32px;
+    width: 100%;
+    text-align: left;
+    font-size: small;
+    border-top: 1px solid #ddd;
 }
