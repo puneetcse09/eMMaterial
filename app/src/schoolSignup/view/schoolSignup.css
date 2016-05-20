@@ -13,17 +13,21 @@
       left: 36% !important;
         margin-right: -10% !important;
         font-size: 11px !important;
-}
+
     }
-
-
+}
 @media only screen and (max-width:600px) 
 {
     .col-sm-4 {
-    width: 40% !important;
-    font-size: 11px !important;
+
+    width: 60% !important;
+    font-size: 8px !important;
 }
 }
+@media only screen and (max-width:600px) 
+{
+    #packagefontsize{flex-direction: column !important ;}
+ }   
 
 md-input-container .md-input {
     font-size: 11px;

@@ -42,14 +42,12 @@
     </md-sidenav>
       <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right"  md-is-locked-open="$mdMedia('gt-md')" id="font">
 <md-toolbar layout="row">
-      
-             <div class="container-fluid">
-           <br>
-           <span>
-                <md-icon md-svg-icon="search_white"> 
-                </md-icon>
-              </span><input ng-model="query">
-               </div>
+      <md-input-container>
+      <md-icon md-svg-icon="search_white"> </md-icon>
+      <input type="text">
+    </md-input-container>
+ 
+             
           <div  ng-controller="RightCtrl">
             <br>
               <md-icon md-svg-icon="close_black" ng-click="close()"  hide-gt-md> </md-icon>
@@ -69,10 +67,12 @@
     <md-toolbar id="toolbarnew" layout="row" ng-show="isToolbar">
 <div class="md-toolbar-tools" >
  
-<div class="line-wrap" ng-click="toggleLeft()" hide-gt-md>
-<div class="line top"></div>
-<div class="line center"></div>
-<div class="line bottom"></div></div>
+                <md-button  class="md-icon-button" ng-click="toggleLeft()">
+      <span>
+                <md-icon md-svg-icon="menu_white"> 
+                </md-icon>
+              </span>
+          </md-button>
 <div class="md-media-sm card-media"><img
             src="assets/images/em1.png" class="md-card-image"
             alt="user avatar" ng-click="gotoHome()" > 
@@ -90,14 +90,14 @@
         </div>
       </div>
 <div class="menu-demo-container">
-    <md-menu md-offset="50 58" md-position-mode="target-right target" id="menu" >
+    <md-menu md-offset="50 60" md-position-mode="target-right target" >
           <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
        <span>
                 <md-icon md-svg-icon="email_white"> 
                 </md-icon>
               </span>
           </md-button>
-          <md-menu-content width="4" >
+          <md-menu-content width="4" id="menu" >
            <div class="dropdown-menu md-whiteframe-z1" >
        <div id="userlist" ng-repeat="user in user">
                         {{ user.name }} 
@@ -108,14 +108,14 @@
       </div>
 
       <div class="menu-demo-container">
-    <md-menu md-offset="50 58" md-position-mode="target-right target" id="menu" >
+    <md-menu md-offset="50 60" md-position-mode="target-right target" >
           <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
       <span>
                 <md-icon md-svg-icon="notifi_white"> 
                 </md-icon>
               </span>
           </md-button>
-          <md-menu-content width="4" >
+          <md-menu-content width="4" id="menu" >
            <div class="dropdown-menu md-whiteframe-z1" >
        <div id="userlist" ng-repeat="user in user">
                         {{ user.name }} 
@@ -126,37 +126,37 @@
       </div>
 
       <div class="menu-demo-container">
-    <md-menu md-offset="50 58" md-position-mode="target-right target" id="menu" >
+    <md-menu md-offset="50 60" md-position-mode="target-right target" >
           <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
        <span>
                 <md-icon md-svg-icon="line_white"> 
                 </md-icon>
               </span>
           </md-button>
-          <md-menu-content width="4" >
-        <ul class="dropdown-menu md-whiteframe-z1">
-      <li><md-button >Task</md-button></li>
+          <md-menu-content width="4" id="menu" >
+        <div class="dropdown-menu md-whiteframe-z1">
+      Task
      
-    </ul>
+    </div>
           </md-menu-content>
         </md-menu>
       </div>
 
       <div class="menu-demo-container">
-    <md-menu md-offset="50 58" md-position-mode="target-right target" id="menu" >
+    <md-menu md-offset="50 60" md-position-mode="target-right target" >
           <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
       <span>
                 <md-icon md-svg-icon="dots_white"> 
                 </md-icon>
               </span>
           </md-button>
-          <md-menu-content width="4" >
-          <ul class="dropdown-menu md-whiteframe-z1">
-      <li><md-button >Toggle Full Screen</md-button></li>
-      <li><md-button>Clear Local Storage</md-button></li>
-      <li><md-button>Privacy Setting</md-button></li>
-       <li><md-button>Other Setting</md-button></li>
-          </ul>     
+          <md-menu-content width="4" id="menu"  >
+          <div class="dropdown-menu md-whiteframe-z1">
+         <label> Toggle Full Screen</label><br>
+        <label>Clear Local Storage</label><br>
+        <label>Privacy Setting</label><br>
+        <label>Other Setting</label><br>
+         </div>     
       </md-menu-content>
         </md-menu>
       </div>
@@ -174,18 +174,18 @@
   </md-toolbar>
  
   <md-toolbar id="toolbar1"  layout="row" ng-show="!isToolbar">
-<div class="md-toolbar-tools" >
 
-  <div class="container-fluid">
-        <div class="row">
-  <input ng-model="query">
-  </div>
-      </div>
- </div>  
+<div class="md-toolbar-tools" layout-align="center center">
+
+  <md-input-container>
+      <md-icon md-svg-icon="backarrow_black" ng-click="isToolbar=true"> </md-icon>
+      <input type="text">
+    </md-input-container>
+ 
+ </div> 
  </md-toolbar> 
  
 
-<div ag-grid="gridOptions" class="ag-fresh" style="height: 100%;"></div>
 
 
   </div>

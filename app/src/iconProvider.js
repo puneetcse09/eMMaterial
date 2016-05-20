@@ -14,7 +14,9 @@
                       .icon("search_white"  , "./assets/icons/ic_search_white_24px.svg"        , 24)
                       .icon("line_white"  , "./assets/icons/ic_format_list_bulleted_white_24px.svg"        , 24)
                       .icon("dots_white"  , "./assets/icons/ic_more_vert_white_24px.svg"        , 24)
+                      .icon("menu_black"  , "./assets/icons/ic_menu_black_24px.svg "       , 24)
                       
+                      .icon("backarrow_black"  , "./assets/icons/ic_keyboard_backspace_black_24px.svg "       , 24)
                       .icon("menu_white"  , "./assets/icons/ic_view_headline_white_24px.svg"        , 24)
                       .icon("close_black" , "./assets/icons/ic_close_black_24px.svg"        , 24)
                       .icon("close_white" , "./assets/icons/ic_close_white_24px.svg"        , 24)
