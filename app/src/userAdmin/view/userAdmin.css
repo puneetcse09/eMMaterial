@@ -166,7 +166,7 @@ md-content {
 }
 .md-sidenav-left, md-sidenav {
     left: 0;
-    top: 9.7%;
+    top: 9.5%;
      height: 85%;
    width:28%;
     transform: translate3d(0,0,0);
@@ -174,7 +174,7 @@ md-content {
 .md-sidenav-right
 {
     width:30%;
-    top: 9.7%;
+    top: 9.5%;
   left:100%;
      height:85%;
   transform: translate3d(-100%,0,0);

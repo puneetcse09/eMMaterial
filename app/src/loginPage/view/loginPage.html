@@ -6,14 +6,14 @@
 	  <div class="login-content ng-scope" >
         <div class="lc-block ng-scope toggled">
           <form id="loginForm">
-            <div layout="column" >
-              <div layout="row" >
+            <div layout="column">
+              <div layout="row">
           		  <span><md-icon md-svg-icon="person_black"> </md-icon></span>
                   <md-input-container>
 				
   			             <input name="userName" ng-model="userName" required size="45" placeholder="UserName">
   			                <span style="color:red" ng-show="loginForm.userName.$dirty
-                        &&loginForm.userName.$touched && loginForm.userName.$invalid">
+                        && loginForm.userName.$touched && loginForm.userName.$invalid">
     	                     <span ng-show="loginForm.userName.$error.required" class="help-block">User name is required.
                            </span>
                         </span>
