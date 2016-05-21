@@ -1,171 +1,346 @@
 <link rel="stylesheet" href="./src/schoolSignup/view/schoolSignup.css">
+
 <div flex layout="column" tabIndex="-1" role="main"
-	ng-controller="schoolSignupCtrl as ul" class="md-whiteframe-z2"ng-init="ul.load()">
-  <app-header></app-header>
 
-	<div class="login-content ng-scope" >
-    <div class="lc-block ng-scope toggled">
+      ng-controller="schoolSignupCtrl as ul" class="md-whiteframe-z2"ng-init="ul.load()">
 
-      <form name="signUpForm">  
-        <div>
-         <md-card>
-         <md-content>
-	          <div class=" layout-xs-column layout-row" layout-xs="column" layout="row" >
-             
-          	 	<span>
-          		  <md-icon md-svg-icon="school_black"> 
-                </md-icon>
-              </span>
-              <label><b>School Details</b></label> 
-         	
-           </div>
-         	 <md-card class=" layout-xs-column layout-row" layout-xs="column" layout="row" id="card">
-            <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
-	          		<md-input-container>
-				          <label>School Name</label>  
-  			           <input name="schoolName" ng-model="schoolName" required size="31">
-  			           <span style="color:red" ng-show="signUpForm.schoolName.$dirty && signUpForm.schoolName.$invalid">
-    	             <span ng-show="signUpForm.schoolName.$error.required" class="help-block"> school Name is required.</span></span>
-  			         </md-input-container>
-                 </div>
-                 <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
-    	           <md-input-container>
-		                <label>School Location</label>  
-  			            <input name="schoolLocation" ng-model="schoolLocation" required size="31">
-  			            <span style="color:red" ng-show="signUpForm.schoolLocation.$dirty && signUpForm.schoolLocation.$invalid">
-    	              <span ng-show="signUpForm.schoolLocation.$error.required" class="help-block">Location is required.</span></span>
-  			         </md-input-container>
-    	     </div></md-card>
-         	<div class=" layout-xs-column layout-row" layout-xs="column" layout="row" id="head">
-    	       <span>
-          		<md-icon md-svg-icon="person_black"> </md-icon></span>
-    	         <label><b>User Details</b></label>
-    	     </div>
-         	<md-card class=" layout-xs-column layout-row" layout-xs="column"layout="row" id="card">
-            <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
-    		    <md-input-container>
-				      <label>First Name</label>  
-  			      <input name="firstName" ng-model="firstName" required size="31">
-  			      <span style="color:red" ng-show="signUpForm.firstName.$dirty && signUpForm.firstName.$invalid">
-    	        <span ng-show="signUpForm.firstName.$error.required" class="help-block">first name is required.</span></span>
-  			   </md-input-container>
-           </div>
-           <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
-    	     <md-input-container>
-				     <label>Middle Name</label>  
-  			     <input name="middleName" ng-model="middleName" required size="31">
-  			     <span style="color:red" ng-show="signUpForm.middleName.$dirty && signUpForm.middleName.$invalid">
-    	       <span ng-show="signUpForm.middleName.$error.required" class="help-block">middle name is required.</span></span>
-  			   </md-input-container>
-           </div>
-           <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
-    	     <md-input-container>
-				     <label>Last Name</label>  
-  			     <input name="lastName" ng-model="lastName" required size="31">
-  			     <span style="color:red" ng-show="signUpForm.lastName.$dirty && signUpForm.lastName.$invalid">
-    	       <span ng-show="signUpForm.lastName.$error.required" class="help-block">last name is required.</span></span>
-  			   </md-input-container>
-    	    </div></md-card>
-         	<md-card class=" layout-xs-column layout-row" layout-xs="column" layout="row" id="card">
-             <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
-         	 <md-input-container>
-				     <label>Email Id</label>  
-  			     <input name="emailId" ng-model="emailId" type="email" required size="31" >
-  			     <span style="color:red" ng-show="signUpForm.emailId.$dirty && signUpForm.emailId.$invalid">
-             <span ng-show="signUpForm.emailId.$error.required">Email is required.</span>
-             <span ng-show="signUpForm.emailId.$error.email">Invalid email address.</span>
-             </span>
-    	     </md-input-container>
-           </div>
-            <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
-    		   <md-input-container>
-				     <label>Contact No</label>  
-  			     <input type="number" name="contactNo" ng-model="contactNo" required size="31" id="contact">
-  			     <span style="color:red" ng-show="signUpForm.contactNo.$dirty && signUpForm.contactNo.$invalid">
-    	       <span class="help-block" ng-show="signUpForm.contactNo.$error.required && signUpForm.contactNo.$error.number">Valid phone number is required</span>
-             <span class="help-block" ng-show="((signUpForm.contactNo.$error.minlength ||signUpForm.contactNo.$error.maxlength)) ">phone number should be 10 digits</span>
-            </span>
-           </md-input-container>
-    	    </div></md-card>
-         	<md-card class=" layout-xs-column layout-row" layout-xs="column"layout="row" id="card"> 	
-           <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">	
-            <md-input-container>
-	            <label>Password</label>  
-  			      <input name="pass" ng-keyup="checkPass()" ng-model="pass" type="password"   required size="31" >
-  			      <span style="color:red" ng-show="signUpForm.pass.$dirty && signUpForm.pass.$touched && signUpForm.pass.$invalid">
-    	        <span class="help-block" ng-show="signUpForm.pass.$error.required">Password is required.</span></span>
-            </md-input-container>
-            </div>
-             <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
-            <md-input-container>
-	            <label>Reenter Password</label>  
-	            <input name="rePass"ng-keyup="checkPass()" ng-model="rePass" type="password" required size="31"> 
-            </md-input-container>
-            </div>
-          <span ng-show="error">{{error}}</span>
-         </md-card>
-	      <div class=" layout-xs-column layout-row" layout-xs="column"layout="row" id="package" id="card">
-	        <span>
-          <md-icon md-svg-icon="school_black"> </md-icon></span>
-         <label><b>Available Package</b></label> 
-      </div>
-      <md-card class=" layout-xs-column layout-row" layout-xs="column" layout="row"  id="packagefontsize">
-    <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
-        <md-card>
-               <div class="card" >
-                <div class="card-header bgm-orange" id="textcolor">
-                  <label>Gold</label><label>  [Total:{{gold}}Rs.]</label></div>
-	                  <div class="card-body card-padding" layout="column">
-	                    <div ng-repeat="message1 in messages1">
-	                    <md-checkbox  ng-model="message1.checked" ng-change="sum(message1,'gold')" >
-	                    {{ message1.title }} 
-                      </md-checkbox>
-                      </div>        
-                    </div>
-                 </div>  
-   	         </md-card>     
-          </div>
-          <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
-       
-          
-            <md-card>
-               <div class="card">
-                <div class="card-header bgm-green" id="textcolor">
-                    <label>Platinum</label><label>  [Total:{{platinum}}Rs.]</label></div>
-                     <div class="card-body card-padding" layout="column">
-                       <div ng-repeat="message2 in messages2">
-	                     <md-checkbox  ng-model="message2.checked" ng-change="sum(message2,'platinum')" >
-	                     {{ message2.title }} 
-                       </md-checkbox>
-                      </div> 
-                </div>
-              </div>
-            </md-card>
-         </div> 
+      <app-header></app-header>
 
-           <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
-       
-         
-             <md-card>
-	             <div class="card">
-                <div class="card-header bgm-red" id="textcolor">
-                    <label>Platinum Plus</label> <label>  [Total:{{platinump}}Rs.]</label> </div>
-                    <div class="card-body card-padding">
-                     <div ng-repeat="message3 in messages3">
-	                     <md-checkbox  ng-model="message3.checked" ng-change="sum(message3,'platinump')" >
-	                      {{ message3.title }} 
-                        </md-checkbox>
-                     </div> 
-                    </div>
-                </div> 
-             </md-card> 
-         </div>
-        </md-card>
-      </md-content>
-	     </md-card>  
-     </div>
-     </form>
-	 </div>          
-	</div>
- 
+      <div class="login-content ng-scope">
+
+            <md-content flex-xs flex-gt-xs="60" class="md-padding" layout-xs="column" layout="row" style="font-family: roboto; margin-top:7%;margin-left:23%;
+                              font-size: 13px;
+
+                              line-height: 1.42857143;">
+
+                
+
+                        <div layout="column">
+
+                         <form name="signUpForm">
+
+                              <div>
+
+                                    <md-card>
+
+                                          <md-content>
+
+                                          <div class=" layout-xs-column layout-row" layout-xs="column" layout="row" >
+
+                                                      <span>
+
+                                                            <md-icon md-svg-icon="school_black"></md-icon>
+
+                                                      </span>
+
+                                                      <label><b>School Details</b></label>
+
+                                                </div>
+
+                                                <md-card class=" layout-xs-column layout-row" layout-xs="column" layout="row" id="card">
+
+                                                <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
+
+                                                      <md-input-container>
+
+                                                            <label>School Name</label> 
+
+                                                                  <input name="schoolName" ng-model="schoolName" required size="31">
+
+                                                                 <span style="color:red" ng-show="signUpForm.schoolName.$dirty && signUpForm.schoolName.$invalid">
+
+                                                            <span ng-show="signUpForm.schoolName.$error.required" class="help-block">
+
+                                                            school Name is required.</span></span>
+
+                                                           </md-input-container>
+
+                                                </div>
+
+                                                <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
+
+                                                      <md-input-container>
+
+                                                      <label>School Location</label> 
+
+                                                                  <input name="schoolLocation" ng-model="schoolLocation" required size="31">
+
+                                                                 <span style="color:red" ng-show="signUpForm.schoolLocation.$dirty && signUpForm.schoolLocation.$invalid">
+
+                                                            <span ng-show="signUpForm.schoolLocation.$error.required" class="help-block">Location is required.</span></span>
+
+                                                           </md-input-container>
+
+                                                </div>
+
+                                          </md-card>
+
+                                                <div class=" layout-xs-column layout-row" layout-xs="column" layout="row" id="head">
+
+                                                      <span>
+
+                                                            <md-icon md-svg-icon="person_black"> </md-icon></span>
+
+                                                <label><b>User Details</b></label>
+
+                                          </div>
+
+                                                <md-card class=" layout-xs-column layout-row" layout-xs="column"layout="row" id="card">
+
+                                                <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
+
+                                                      <md-input-container>
+
+                                                                  <label>First Name</label> 
+
+                                                                        <input name="firstName" ng-model="firstName" required size="31">
+
+                                                                       <span style="color:red" ng-show="signUpForm.firstName.$dirty && signUpForm.firstName.$invalid">
+
+                                                            <span ng-show="signUpForm.firstName.$error.required" class="help-block">first name is required.</span></span>
+
+                                                                 </md-input-container>
+
+                                                      </div>
+
+                                                      <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
+
+                                                      <md-input-container>
+
+                                                            <label>Middle Name</label> 
+
+                                                                  <input name="middleName" ng-model="middleName" required size="31">
+
+                                                                 <span style="color:red" ng-show="signUpForm.middleName.$dirty && signUpForm.middleName.$invalid">
+
+                                                                  <span ng-show="signUpForm.middleName.$error.required" class="help-block">middle name is required.</span></span>
+
+                                                                 </md-input-container>
+
+                                                      </div>
+
+                                                      <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
+
+                                                      <md-input-container>
+
+                                                            <label>Last Name</label> 
+
+                                                                  <input name="lastName" ng-model="lastName" required size="31">
+
+                                                                 <span style="color:red" ng-show="signUpForm.lastName.$dirty && signUpForm.lastName.$invalid">
+
+                                                                  <span ng-show="signUpForm.lastName.$error.required" class="help-block">last name is required.</span></span>
+
+                                                                 </md-input-container>
+
+                                                </div>
+
+                                          </md-card>
+
+                                                <md-card class=" layout-xs-column layout-row" layout-xs="column" layout="row" id="card">
+
+                                                      <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
+
+                                                            <md-input-container>
+
+                                                            <label>Email Id</label> 
+
+                                                                  <input name="emailId" ng-model="emailId" type="email" required size="31" >
+
+                                                                 <span style="color:red" ng-show="signUpForm.emailId.$dirty && signUpForm.emailId.$invalid">
+
+                                                                        <span ng-show="signUpForm.emailId.$error.required">Email is required.</span>
+
+                                                                        <span ng-show="signUpForm.emailId.$error.email">Invalid email address.</span>
+
+                                                                  </span>
+
+                                                      </md-input-container>  
+
+                                                      </div>
+
+                                                <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
+
+                                                            <md-input-container>
+
+                                                            <label>Contact No</label> 
+
+                                                                  <input type="number" name="contactNo" ng-model="contactNo" required size="31" id="contact">
+
+                                                                 <span style="color:red" ng-show="signUpForm.contactNo.$dirty && signUpForm.contactNo.$invalid">
+
+                                                                        <span class="help-block" ng-show="signUpForm.contactNo.$error.required && signUpForm.contactNo.$error.number">Valid phone number is required</span>
+
+                                                                        <span class="help-block" ng-show="((signUpForm.contactNo.$error.minlength ||signUpForm.contactNo.$error.maxlength)) ">phone number should be 10 digits</span>
+
+                                                            </span>
+
+                                                            </md-input-container>
+
+                                                </div>
+
+                                          </md-card>
+
+                                                <md-card class=" layout-xs-column layout-row" layout-xs="column"layout="row" id="card">      
+
+                                                      <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">     
+
+                                                      <md-input-container>
+
+                                                            <label>Password</label> 
+
+                                                                        <input name="pass" ng-keyup="checkPass()" ng-model="pass" type="password"   required size="31" >
+
+                                                                       <span style="color:red" ng-show="signUpForm.pass.$dirty && signUpForm.pass.$touched && signUpForm.pass.$invalid">
+
+                                                                  <span class="help-block" ng-show="signUpForm.pass.$error.required">Password is required.</span></span>
+
+                                                      </md-input-container>
+
+                                                </div>
+
+                                                      <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
+
+                                                      <md-input-container>
+
+                                                            <label>Reenter Password</label> 
+
+                                                            <input name="rePass"ng-keyup="checkPass()" ng-model="rePass" type="password" required size="31">
+
+                                                      </md-input-container>
+
+                                                </div>
+
+                                                      <span ng-show="error">{{error}}</span>
+
+                                                </md-card>
+
+                                                <div class=" layout-xs-column layout-row" layout-xs="column"layout="row" id="package" id="card">
+
+                                                <span>                                                     
+
+                                                            <md-icon md-svg-icon="school_black"> </md-icon>
+
+                                                      </span>
+
+                                                      <label><b>Available Package</b></label>
+
+                                                </div>
+
+                                                <md-card class=" layout-xs-column layout-row" layout-xs="column" layout="row"  id="packagefontsize">
+
+                                                      <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
+
+                                                            <md-card>
+
+                                                                  <div class="card" >
+
+                                                                  <div class="card-header bgm-orange" id="textcolor">
+
+                                                                        <label>Gold</label><label>  [Total:{{gold}}Rs.]</label>
+
+                                                                  </div>
+
+                                                                  <div class="card-body card-padding" layout="column">
+
+                                                                  <div ng-repeat="message1 in messages1">
+
+                                                                        <md-checkbox  ng-model="message1.checked" ng-change="sum(message1,'gold')" >
+
+                                                                              {{ message1.title }}
+
+                                                                              </md-checkbox>
+
+                                                                        </div>       
+
+                                                                  </div>
+
+                                                            </div> 
+
+                                                            </md-card>    
+
+                                                      </div>
+
+                                                      <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
+
+                                                                  <md-card>
+
+                                                                  <div class="card">
+
+                                                                  <div class="card-header bgm-green" id="textcolor">
+
+                                                                        <label>Platinum</label><label>  [Total:{{platinum}}Rs.]</label>
+
+                                                                  </div>
+
+                                                                  <div class="card-body card-padding" layout="column">
+
+                                                                        <div ng-repeat="message2 in messages2">
+
+                                                                        <md-checkbox  ng-model="message2.checked" ng-change="sum(message2,'platinum')" >
+
+                                                                              {{ message2.title }}
+
+                                                                        </md-checkbox>
+
+                                                                        </div>
+
+                                                                  </div>
+
+                                                                  </div>
+
+                                                      </md-card>
+
+                                                      </div>
+
+                                                      <div flex-xs="" flex-gt-xs="50" layout="column" class="layout-column flex-xs flex-gt-xs-50">
+
+                                                                  <md-card>
+
+                                                            <div class="card">     
+
+                                                                  <div class="card-header bgm-red" id="textcolor">
+
+                                                                        <label>Platinum Plus</label> <label>  [Total:{{platinump}}Rs.]</label>
+
+                                                                  </div>
+
+                                                                  <div class="card-body card-padding">
+
+                                                                        <div ng-repeat="message3 in messages3">
+
+                                                                        <md-checkbox  ng-model="message3.checked" ng-change="sum(message3,'platinump')" >
+
+                                                                              {{ message3.title }}
+
+                                                                        </md-checkbox>
+
+                                                                        </div>
+
+                                                                  </div>
+
+                                                            </div>
+
+                                                            </md-card>
+
+                                                      </div>
+
+                                                </md-card>
+
+                                          </md-content>
+
+                              </md-card> 
+
+                              </div>
+
+                        </form>
+
+                  </div>
+
+                
+
+            </md-content>
+
+     </div>         
+
 </div>

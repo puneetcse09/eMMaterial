@@ -1,24 +1,3 @@
-@media only screen and (max-width:750px) 
-{
-    .lc-block
-    {
-     padding: 0px 0px 0px !important;
-    }
-}
-@media only screen and (max-width:750px) 
-{
-.lc-block{
-    top: 55% !important;
-   right: 5% !important;
-      left: 36% !important;
-        margin-right: -10% !important;
-        font-size: 11px !important;
-
-    }
-}
-
-   
-
 md-input-container .md-input {
     font-size: 11px;
 }
