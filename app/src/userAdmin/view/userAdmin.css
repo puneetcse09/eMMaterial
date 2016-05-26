@@ -6,16 +6,17 @@
            width: 25px !important;
 }
 }
-@media only screen and (max-width:750px) 
-{
-  #font{
-        top:20% !important;
-    }
-  }
+
   @media only screen and (max-width:750px) 
 {
   md-menu-content{
         top:30% !important;
+    }
+  }
+  @media (min-width:1060px) and (max-width:2000px) 
+{
+  #font{
+        top:6% !important;
     }
   }
 #profileinfo
@@ -51,9 +52,11 @@
     border: 13px solid rgba(0, 0, 0, 0);
     box-sizing: content-box;
 }
-._md-sidenav-backdrop.md-opaque
-{
-opacity: 0;
+md-sidenav._md-locked-open,md-sidenav._md-locked-open-remove._md-closed, md-sidenav._md-locked-open._md-closed, md-sidenav._md-locked-open._md-closed.md-sidenav-left{
+   position: absolute !important;
+}
+md-backdrop.md-opaque {
+    opacity:0;
 }
 #userlist {
      padding: 10px;

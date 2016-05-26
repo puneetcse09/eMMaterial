@@ -4,7 +4,8 @@
 	ng-init="ul.load()">
 
 	 <div class="login-content ng-scope" >
-  	 <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')"id="font">
+    
+  	 <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" id="font">
       <md-toolbar layout="row" id="userinfo">
        
           <div id="userprofile" style="background-image:url(/assets/images/profile-menu.png);">
@@ -40,11 +41,12 @@
         
       </md-content>
     </md-sidenav>
-      <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right"  md-is-locked-open="$mdMedia('gt-md')" id="font">
+  
+      <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right" id="font">
 <md-toolbar layout="row">
       <md-input-container>
       <md-icon md-svg-icon="search_white"> </md-icon>
-      <input type="text">
+      <input type="text" aria-label="Custom3">
     </md-input-container>
  
              
@@ -67,14 +69,14 @@
     <md-toolbar id="toolbarnew" layout="row" ng-show="isToolbar">
 <div class="md-toolbar-tools" >
  
-                <md-button  class="md-icon-button" ng-click="toggleLeft()">
+                <md-button aria-label="Custom" id="menuicon" class="md-icon-button" ng-click="toggleLeft()">
       <span>
                 <md-icon md-svg-icon="menu_white"> 
                 </md-icon>
               </span>
           </md-button>
-<div class="md-media-sm card-media"><img
-            src="assets/images/em1.png" class="md-card-image"
+<div class="md-media-sm card-media">
+  <img src="assets/images/em1.png" class="md-card-image"
             alt="user avatar" ng-click="gotoHome()" > 
           </div>
          
@@ -164,7 +166,7 @@
          
 
 
-  <md-button id="icon" ng-click="toggleRight()" hide-gt-md>
+  <md-button id="icon" aria-label="Custom1" ng-click="toggleRight()">
           <span>
                 <md-icon md-svg-icon="comment_white"> 
                 </md-icon>
@@ -179,7 +181,7 @@
 
   <md-input-container>
       <md-icon md-svg-icon="backarrow_black" ng-click="isToolbar=true"> </md-icon>
-      <input type="text">
+      <input type="text" aria-label="Custom2">
     </md-input-container>
  
  </div> 
