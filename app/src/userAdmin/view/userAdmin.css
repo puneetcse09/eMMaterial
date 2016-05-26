@@ -6,8 +6,7 @@
            width: 25px !important;
 }
 }
-
-  @media only screen and (max-width:750px) 
+@media only screen and (max-width:750px) 
 {
   md-menu-content{
         top:30% !important;
