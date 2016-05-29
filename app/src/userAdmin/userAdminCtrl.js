@@ -24,6 +24,7 @@
       originatorEv = null;
     };    
             $scope.isToolbar=true;
+            $scope.drop =true;
            $scope.name = 'John';
     	    $scope.toggleLeft = buildDelayedToggler('left');
     	    $scope.toggleRight = buildToggler('right');
@@ -37,7 +38,14 @@
 {id: 4, name: "Jonathan morris"},
 {id: 5, name: "Fedric metchell"},
 {id: 6, name: "Teena bell"},
-];               
+];            
+ $scope.user1 = [
+{id: 1, name: "Toggle Full Screen"},
+{id: 2, name: "Clear Local Storage "},
+{id: 3, name: "Privacy Setting"},
+{id: 4, name: "Other Setting"}
+
+];                  
           $scope.gotoHome = function (){
           $state.go('emHome');
              };

@@ -3,75 +3,204 @@
 	ng-controller="userAdminCtrl as ul" class="md-whiteframe-z2"
 	ng-init="ul.load()">
 
-	 <div class="login-content ng-scope" >
-    
+	 <div class="login-content ng-scope"  >
+    <div id="area">
+
   	 <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" id="font">
       <md-toolbar layout="row" id="userinfo">
        
           <div id="userprofile" style="background-image:url(/assets/images/profile-menu.png);">
-          <div class="profilepic" layout="row">
+          <div class="profilepic" layout="column" id="prof">
+          
           <img src="assets/images/user.jpg" class="mCS_img_loaded" alt="user avatar">
          
       </div>
         
         <div id="profileinfo" layout="row">
          
-    <select name="singleSelect" ng-model="data.singleSelect" style=" width:100%;
-   height: 100%;">
-      <option value="">Jonathan Morris</option>
-      <option value="option-1">View Profile</option>
-      <option value="option-2">Privacy Settings</option>
-<option value="option-3">Setting</option>
-<option value="option-4">Logout</option>
-    </select>
+    <label style="padding:4px 0px 0px 10px;">Jonathan Morris</label>
+    <div flex></div>
+     <md-icon md-svg-icon="arrow_down" ng-show="drop" ng-click="drop=false"> </md-icon>
+     <md-icon md-svg-icon="arrow_up" ng-show="!drop"ng-click="drop=true"> </md-icon>
            </div>
             </div>
         
         </md-toolbar>
-      <md-content layout-padding ng-controller="LeftCtrl" layout="column">
-      <div class="fa fa-dashboard"> Dashboard</div>
-      <div class="fa fa-anchor">  Admin Panel</div>
-      <div class="fa fa-graduation-cap"> Alumni</div>
-      <div class="fa fa-edit">  Attendance</div>
-      <div class="fa fa-fax">  Communication</div>
-      <div class="fa fa-certificate"> Customer Service</div>
-      <div class="fa fa-book"> Library</div>
-      <div class="fa fa-bus">  Transport</div>
-      <div class="fa fa-users"> Users</div>
-        
-      </md-content>
-    </md-sidenav>
-  <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right" id="font">
-<md-toolbar layout="row">
-      <md-input-container>
-      <md-icon md-svg-icon="search_white"> </md-icon>
-      <input type="text" aria-label="Custom3">
-    </md-input-container>
- 
-             
-          <div  ng-controller="RightCtrl">
-            <br>
-              <md-icon md-svg-icon="close_black" ng-click="close()"  hide-gt-md> </md-icon>
-       
-       
-      </div>
-      </md-toolbar>
-  <md-content layout-padding ng-controller="RightCtrl" layout="column">
-       
-       <div id="userlist" ng-repeat="user in user">
-                        {{ user.name }} 
+      <div ng-controller="LeftCtrl" layout="column">
+        <b>
+ <div layout="column" ng-show="!drop">
+<div layout="row">
+<md-icon md-svg-icon="person_black" style="padding: 13px 13px 13px 25px;margin: 0px;height: 18px;width: 18px;"> 
+                </md-icon>
+                <label style="padding: 13px 13px 13px 5px;">View Profie</label>
   </div>
+  <div layout="row">
+<md-icon md-svg-icon="privacy_black" style="padding: 13px 13px 13px 25px;margin: 0px;height: 18px;width: 18px;"> 
+                </md-icon>
+                <label style="padding: 13px 13px 13px 5px;">Privacy Setting</label>
+  </div>
+  <div layout="row">
+<md-icon md-svg-icon="settings_black" style="padding: 13px 13px 13px 25px;margin: 0px;height: 18px;width: 18px;"> 
+                </md-icon>
+                <label style="padding: 13px 13px 13px 5px;"> Settings</label>
+  </div>
+  <div layout="row">
+<md-icon md-svg-icon="logout_black" style="padding: 13px 13px 13px 25px;margin: 0px;height: 18px;width: 18px;"> 
+                </md-icon>
+                <label style="padding: 13px 13px 13px 5px;"> Logout</label>
+  </div>
+ </div>
+          <div layout="row" layout-align="start end">
+      <div class="fa fa-dashboard" style=" padding: 13px 13px 18px 25px;"> </div>
+     <a href="" style="padding: 13px 13px 13px 8px;"> Dashboard</a>
+   <md-icon style="height: 18px;width: 18px;padding:0px 0px 0px 95px" md-svg-icon="add_black"> </md-icon>
+    </div>
+   
+    <div layout="row">
+      <div class="fa fa-anchor">  </div>
+      <a href=""  style="padding: 13px 13px 13px 9px;">Admin Panel</a>
+      <md-icon style="height: 18px;width: 18px;padding:0px 0px 0px 75px" md-svg-icon="add_black"> </md-icon>
+    </div>
+<div layout="row">
+     <div class="fa fa-graduation-cap"> </div>
+      <a href=""  style="padding: 13px 13px 13px 5px;"> Alumni</a><md-icon style="height: 18px;width: 18px;padding:0px 0px 0px 110px" md-svg-icon="add_black"> </md-icon>
+    </div>
+<div layout="row">
+     <div class="fa fa-edit">  </div>
+      <a href=""  style="padding: 13px 13px 13px 9px;"> Attendance</a><md-icon style="height: 18px;width: 18px;padding:0px 0px 0px 85px" md-svg-icon="add_black"> </md-icon>
+    </div>
+    <div layout="row">
+    <div class="fa fa-fax">  </div>
+      <a href=""  style="padding: 13px 13px 13px 9px;"> Communication</a><md-icon style="height: 18px;width: 18px;padding:0px 0px 0px 55px" md-svg-icon="add_black"> </md-icon>
+    </div>
+    <div layout="row">
+     <div class="fa fa-certificate"> </div>
+      <a href=""  style="padding: 13px 13px 13px 9px;"> Customer Service</a><md-icon style="height: 18px;width: 18px;padding:0px 0px 0px 45px" md-svg-icon="add_black"> </md-icon>
+    </div>
+    <div layout="row">
+    <div class="fa fa-book"> </div>
+     <a href=""  style="padding: 13px 13px 13px 9px;"> Library</a><md-icon style="height: 18px;width: 18px;padding:0px 0px 0px 110px" md-svg-icon="add_black"> </md-icon>
+    </div>
+    <div layout="row">
+      <div class="fa fa-bus">  </div>
+      <a href=""  style="padding: 13px 13px 13px 9px;"> Transport</a><md-icon style="height: 18px;width: 18px;padding:0px 0px 0px 95px" md-svg-icon="add_black"> </md-icon>
+    </div>
+    <div layout="row">
+      <div class="fa fa-users"> </div>
+      <a href=""  style="padding: 13px 13px 13px 9px;"> Users</a><md-icon style="height: 18px;width: 18px;padding:0px 0px 0px 115px" md-svg-icon="add_black"> </md-icon>
+    </div>
+</b>
+   </div>
 
-      </md-content>  
+    </md-sidenav>
+  
+    <md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="right">
+     
+      <div ng-controller="RightCtrl" >
+        <div layout="row" style="padding:20px 0px 0px 0px;">
+       
+<md-icon style="padding:25px 0px 0px 10px;margin:0px;height: 25px;width:25px;" md-svg-icon="search_black"> 
+                </md-icon>
+<md-input-container style="margin:15px;">
+ <input name="search" ng-model="search" required size="30" placeholder="Search">
+ </md-input-container>
     
+              </div>
+              <div class="profilepic" layout="row" style="padding:0px 0px 0px 20px">
+<img src="assets/images/user1.jpg" class="mCS_img_loaded" alt="user avatar" style="width: 35px; height: 35px;">
+    <div style="padding:0px 0px 0px 15px;">
+         <div layout="row" style="width:150px"><label>David Belle</label></div>
+          <div layout="row" style="width: 150px;">
+<div class="ng-binding" id="para">
+   Available</div>
+    </div>
+        </div> 
+      </div>
+      <div class="profilepic" layout="row" style="padding:25px 0px 0px 20px">
+          
+          <img src="assets/images/user2.jpg" class="mCS_img_loaded" alt="user avatar" style=" width: 35px;
+    height: 35px;">
+    <div style="padding:0px 0px 0px 15px;">
+         <div layout="row" style="width:150px"><label>Glenn Jecobs</label></div>
+          <div layout="row" style="width:150px">
+<div class="ng-binding" id="para">
+  Last 3 hours ago
+</div>
+    </div>
+        </div> 
+      </div>
+        <div class="profilepic" layout="row" style="padding:25px 0px 0px 20px">
+          
+          <img src="assets/images/user3.jpg" class="mCS_img_loaded" alt="user avatar" style="width: 35px;
+    height: 35px;">
+    <div style="padding:0px 0px 0px 15px;">
+         <div layout="row" style="width:150px"><label>Bill Phillips</label></div>
+          <div layout="row" style="width:150px">
+<div class="ng-binding" id="para">
+Last 1 hour ago
+</div>
+    </div>
+        </div> 
+      </div>
+       <div class="profilepic" layout="row" style="padding:25px 0px 0px 20px">
+          
+          <img src="assets/images/user4.jpg" class="mCS_img_loaded" alt="user avatar" style="width: 35px;
+    height: 35px;">
+    <div style="padding:0px 0px 0px 15px;">
+         <div layout="row" style="width:150px"><label>Fredric Mitchell Jr</label></div>
+          <div layout="row" style="width:150px">
+<div class="ng-binding" id="para">
+Busy
+</div>
+    </div>
+        </div> 
+      </div>
+       <div class="profilepic" layout="row" style="padding:20px 0px 0px 20px">
+          
+          <img src="assets/images/user.jpg" class="mCS_img_loaded" alt="user avatar" style=" width: 35px;
+    height: 35px;">
+    <div style="padding:0px 0px 0px 15px;">
+         <div layout="row" style="width:150px"><label>Jonathan Morris</label></div>
+          <div layout="row" style="width:150px">
+<div class="ng-binding" id="para">
+ Available</div>
+    </div>
+        </div> 
+      </div>
+
+        <div class="profilepic" layout="row" style="padding:25px 0px 0px 20px">
+<img src="assets/images/user1.jpg" class="mCS_img_loaded" alt="user avatar" style="width: 35px; height: 35px;">
+    <div style="padding:0px 0px 0px 15px;">
+         <div layout="row" style="width:150px"><label>David Belle</label></div>
+          <div layout="row" style="width: 150px;">
+<div class="ng-binding" id="para">
+   Last 3 minutes ago</div>
+    </div>
+        </div> 
+      </div>
+       <div class="profilepic" layout="row" style="padding:25px 0px 0px 20px">
+          
+          <img src="assets/images/user2.jpg" class="mCS_img_loaded" alt="user avatar" style=" width: 35px;
+    height: 35px;">
+    <div style="padding:0px 0px 0px 15px;">
+         <div layout="row" style="width:150px"><label>Glenn Jecobs</label></div>
+          <div layout="row" style="width:150px">
+<div class="ng-binding" id="para">
+  Last 3 hours ago
+</div>
+    </div>
+        </div> 
+      </div>
+      </div>
     </md-sidenav>
     <md-toolbar id="toolbarnew" layout="row" ng-show="isToolbar">
 <div class="md-toolbar-tools" >
  
-                <md-button aria-label="Custom" id="menuicon" class="md-icon-button" ng-click="toggleLeft()">
+                <a href id="hover"  aria-label="Custom" id="menuicon"  ng-click="toggleLeft()">
       <span>
-                <md-icon md-svg-icon="menu_white"> 
-                </md-icon>
+                <md-icon md-svg-icon="menu_white"> </md-icon>
+                </span>
+                </a>
               </span>
           </md-button>
 <div class="md-media-sm card-media">
@@ -80,83 +209,266 @@
           </div>
          
 <div flex></div>
-             <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-2">
-           <span>
+             <div class="row">
+              <a href id="hover">
+          <span>
                 <md-icon md-svg-icon="search_white" ng-click="isToolbar=false"> 
                 </md-icon>
               </span>
-          </div>
-        </div>
-      </div>
+              </a>
+         </div>
 <div class="menu-demo-container">
-    <md-menu md-offset="50 60" md-position-mode="target-right target" >
-          <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+    <md-menu md-offset="0 35" md-position-mode="target-right target" >
+          <a href  id="hover" aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
        <span>
                 <md-icon md-svg-icon="email_white"> 
                 </md-icon>
               </span>
-          </md-button>
-          <md-menu-content width="4" id="menu" >
+          </a>
+          <md-menu-content id="menu" >
            <div class="dropdown-menu md-whiteframe-z1" >
-       <div id="userlist" ng-repeat="user in user">
-                        {{ user.name }} 
+            <div layout="row" layout-align="center center" style="padding:25px 0px 0px 0px">
+     <label style="color: #4C4C4C; border-bottom: 1px solid #F0F0F0;font-weight: 500;">MESSAGES</label>
+       </div>
+       <div class="profilepic" layout="row" id="prof"style="padding:25px 0px 0px 20px">
+          
+          <img src="assets/images/user1.jpg" class="mCS_img_loaded" alt="user avatar" style=" width: 35px;
+    height: 35px;">
+    <div style="padding:0px 0px 0px 15px;">
+         <div layout="row"><label>David Belle</label></div>
+          <div layout="row" style="width: 208px;">
+<div class="ng-binding" id="para">
+  Cum sociis natoque penatibus et magnis dis parturient montes</div>
+    </div>
+        </div> 
       </div>
+      <div class="profilepic" layout="row" id="prof"style="padding:25px 0px 0px 20px">
+          
+          <img src="assets/images/user2.jpg" class="mCS_img_loaded" alt="user avatar" style=" width: 35px;
+    height: 35px;">
+    <div style="padding:0px 0px 0px 15px;">
+         <div layout="row"><label>Glenn Jecobs</label></div>
+          <div layout="row" style="width: 208px;">
+<div class="ng-binding" id="para">
+  Ut vitae lacus sem ellentesque maximus, nunc sit amet varius dignissim, dui est consectetur neque
+</div>
+    </div>
+        </div> 
+      </div>
+        <div class="profilepic" layout="row" id="prof"style="padding:25px 0px 0px 20px">
+          
+          <img src="assets/images/user3.jpg" class="mCS_img_loaded" alt="user avatar" style=" width: 35px;
+    height: 35px;">
+    <div style="padding:0px 0px 0px 15px;">
+         <div layout="row"><label>Bill Phillips</label></div>
+          <div layout="row" style="width: 208px;">
+<div class="ng-binding" id="para">
+ Proin laoreet commodo eros id faucibus. Donec ligula quam, imperdiet vel ante placerat
+</div>
+    </div>
+        </div> 
+      </div>
+       <div class="profilepic" layout="row" id="prof"style="padding:25px 0px 0px 20px">
+          
+          <img src="assets/images/user4.jpg" class="mCS_img_loaded" alt="user avatar" style=" width: 35px;
+    height: 35px;">
+    <div style="padding:0px 0px 0px 15px;">
+         <div layout="row"><label>Fredric Mitchell Jr</label></div>
+          <div layout="row" style="width: 208px;">
+<div class="ng-binding" id="para">
+Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies
+</div>
+    </div>
+        </div> 
+      </div>
+       <div class="profilepic" layout="row" id="prof"style="padding:20px 0px 0px 20px">
+          
+          <img src="assets/images/user.jpg" class="mCS_img_loaded" alt="user avatar" style=" width: 35px;
+    height: 35px;">
+    <div style="padding:0px 0px 0px 15px;">
+         <div layout="row"><label>Jonathan Morris</label></div>
+          <div layout="row" style="width: 208px;">
+<div class="ng-binding" id="para">
+  Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</div>
+    </div>
+        </div> 
+      </div>
+       
+       <div layout="row" layout-align="center center"style="padding:40px 0px 10px 10px;font-size: 11px;">
+       <a href> View All</a>
+        </div>
      </div>
           </md-menu-content>
         </md-menu>
       </div>
 
       <div class="menu-demo-container">
-    <md-menu md-offset="50 60" md-position-mode="target-right target" >
-          <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+    <md-menu md-offset="0 35" md-position-mode="target-right target" >
+          <a href  id="hover" aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
       <span>
                 <md-icon md-svg-icon="notifi_white"> 
                 </md-icon>
               </span>
-          </md-button>
+          </a>
           <md-menu-content width="4" id="menu" >
            <div class="dropdown-menu md-whiteframe-z1" >
-       <div id="userlist" ng-repeat="user in user">
-                        {{ user.name }} 
+      <div layout="row" layout-align="center center" style="padding:25px 0px 0px 0px">
+     <label style="color: #4C4C4C; border-bottom: 1px solid #F0F0F0;font-weight: 500;">NOTIFICATION</label>
+       </div>
+       <div class="profilepic" layout="row" id="prof"style="padding:25px 0px 0px 20px">
+          
+          <img src="assets/images/user1.jpg" class="mCS_img_loaded" alt="user avatar" style=" width: 35px;
+    height: 35px;">
+    <div style="padding:0px 0px 0px 15px;">
+         <div layout="row"><label>David Belle</label></div>
+          <div layout="row" style="width: 208px;">
+<div class="ng-binding" id="para">
+  Cum sociis natoque penatibus et magnis dis parturient montes</div>
+    </div>
+        </div> 
       </div>
+      <div class="profilepic" layout="row" id="prof"style="padding:25px 0px 0px 20px">
+          
+          <img src="assets/images/user2.jpg" class="mCS_img_loaded" alt="user avatar" style=" width: 35px;
+    height: 35px;">
+    <div style="padding:0px 0px 0px 15px;">
+         <div layout="row"><label>Glenn Jecobs</label></div>
+          <div layout="row" style="width: 208px;">
+<div class="ng-binding" id="para">
+  Ut vitae lacus sem ellentesque maximus, nunc sit amet varius dignissim, dui est consectetur neque
+</div>
+    </div>
+        </div> 
+      </div>
+        <div class="profilepic" layout="row" id="prof"style="padding:25px 0px 0px 20px">
+          
+          <img src="assets/images/user3.jpg" class="mCS_img_loaded" alt="user avatar" style=" width: 35px;
+    height: 35px;">
+    <div style="padding:0px 0px 0px 15px;">
+         <div layout="row"><label>Bill Phillips</label></div>
+          <div layout="row" style="width: 208px;">
+<div class="ng-binding" id="para">
+ Proin laoreet commodo eros id faucibus. Donec ligula quam, imperdiet vel ante placerat
+</div>
+    </div>
+        </div> 
+      </div>
+       <div class="profilepic" layout="row" id="prof"style="padding:25px 0px 0px 20px">
+          
+          <img src="assets/images/user4.jpg" class="mCS_img_loaded" alt="user avatar" style=" width: 35px;
+    height: 35px;">
+    <div style="padding:0px 0px 0px 15px;">
+         <div layout="row"><label>Fredric Mitchell Jr</label></div>
+          <div layout="row" style="width: 208px;">
+<div class="ng-binding" id="para">
+Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies
+</div>
+    </div>
+        </div> 
+      </div>
+       <div class="profilepic" layout="row" id="prof"style="padding:20px 0px 0px 20px">
+          
+          <img src="assets/images/user.jpg" class="mCS_img_loaded" alt="user avatar" style=" width: 35px;
+    height: 35px;">
+    <div style="padding:0px 0px 0px 15px;">
+         <div layout="row"><label>Jonathan Morris</label></div>
+          <div layout="row" style="width: 208px;">
+<div class="ng-binding" id="para">
+  Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</div>
+    </div>
+        </div> 
+      </div>
+       
+       <div layout="row" layout-align="center center"style="padding:40px 0px 10px 10px;font-size: 11px;">
+       <a href> View Previous</a>
+        </div>
      </div>
           </md-menu-content>
         </md-menu>
       </div>
 
       <div class="menu-demo-container">
-    <md-menu md-offset="50 60" md-position-mode="target-right target" >
-          <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+    <md-menu md-offset="0 35" md-position-mode="target-right target" >
+          <a href  id="hover" aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
        <span>
                 <md-icon md-svg-icon="line_white"> 
                 </md-icon>
               </span>
-          </md-button>
+          </a>
           <md-menu-content width="4" id="menu" >
         <div class="dropdown-menu md-whiteframe-z1">
-      Task
-     
-    </div>
+       <div layout="row" layout-align="center center" style="padding:25px 0px 0px 0px">
+     <label style="color: #4C4C4C; border-bottom: 1px solid #F0F0F0;font-weight: 500;">TASK</label>
+       </div>
+       <div style="font-size: 13px;">
+       <div layout="column" id="prof"style="padding:25px 0px 0px 20px;">
+        <label style="padding:0px 0px 7px 0px;">HTML5 Validation Report</label>
+         <md-progress-linear id="bl" style="width:250px;" value="40px">
+       
+       </md-progress-linear>
+        </div>
+        <div layout="column" id="prof"style="padding:25px 0px 0px 20px">
+        <label style="padding:0px 0px 7px 0px;">Google Chrome Extension</label>
+        <md-progress-linear style="width: 200px;"md-mode="determinate" value="40px"></md-progress-linear>
+        </div>
+        <div layout="column" id="prof"style="padding:25px 0px 0px 20px">
+        <label style="padding:0px 0px 7px 0px;">Social Intranet Projects</label>
+        <md-progress-linear style="width: 50px;"md-mode="determinate" value="40px"></md-progress-linear>
+        </div>
+        <div layout="column" id="prof"style="padding:25px 0px 0px 20px">
+        <label style="padding:0px 0px 7px 0px;">Bootstrap Admin Template</label>
+        <md-progress-linear style="width: 150px;"md-mode="determinate" value="40px"></md-progress-linear>
+        </div>
+        <div layout="column" id="prof"style="padding:25px 0px 0px 20px">
+        <label style="padding:0px 0px 7px 0px;">Youtube Client App</label>
+        <md-progress-linear style="width: 200px;"md-mode="determinate" value="40px"></md-progress-linear>
+        </div>
+        <div layout="row" layout-align="center center"style="padding:40px 0px 10px 10px;font-size: 11px;">
+       <a href> View All</a>
+        </div>
+      </div>
+        </div>
+    
           </md-menu-content>
         </md-menu>
       </div>
 
       <div class="menu-demo-container">
-    <md-menu md-offset="50 60" md-position-mode="target-right target" >
-          <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+    <md-menu md-offset="0 35" md-position-mode="target-right target" >
+          <a href  id="hover"  aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
       <span>
                 <md-icon md-svg-icon="dots_white"> 
                 </md-icon>
               </span>
-          </md-button>
-          <md-menu-content width="4" id="menu"  >
+          </a>
+          <md-menu-content id="menu1"  >
           <div class="dropdown-menu md-whiteframe-z1">
-         <label> Toggle Full Screen</label><br>
-        <label>Clear Local Storage</label><br>
-        <label>Privacy Setting</label><br>
-        <label>Other Setting</label><br>
+             <div style="font-size: 13px;">
+             <div layout="row" layout-align="center center" style="padding:35px 0px 0px 0px">
+     <label style="color: #4C4C4C; border-bottom: 1px solid #F0F0F0;font-weight: 500;">TASK</label>
+       </div>
+      <div layout="row">
+<md-icon md-svg-icon="toggle_black" style="padding: 13px 13px 13px 25px;margin: 0px;height: 18px;width: 18px;"> 
+                </md-icon>
+                <label style="padding: 13px 13px 13px 5px;"> Toggle Fullscreen</label>
+  </div>
+  <div layout="row">
+<md-icon md-svg-icon="delete_black" style="padding: 13px 13px 13px 25px;margin: 0px;height: 18px;width: 18px;"> 
+                </md-icon>
+                <label style="padding: 13px 13px 13px 5px;"> Clear Local Storage</label>
+  </div>
+  <div layout="row">
+<md-icon md-svg-icon="face_black" style="padding: 13px 13px 13px 25px;margin: 0px;height: 18px;width: 18px;"> 
+                </md-icon>
+                <label style="padding: 13px 13px 13px 5px;"> Privacy Settings</label>
+  </div>
+  <div layout="row">
+<md-icon md-svg-icon="settings_black" style="padding: 13px 13px 13px 25px;margin: 0px;height: 18px;width: 18px;"> 
+                </md-icon>
+                <label style="padding: 13px 13px 13px 5px;"> Other Settings</label>
+  </div>
+
+         </div>
          </div>     
       </md-menu-content>
         </md-menu>
@@ -165,22 +477,22 @@
          
 
 
-  <md-button id="icon" aria-label="Custom1" ng-click="toggleRight()">
+  <a href id="hover"  id="icon" aria-label="Custom1" ng-click="toggleRight()">
           <span>
                 <md-icon md-svg-icon="comment_white"> 
                 </md-icon>
               </span>
-          </md-button>
+          </a>
      </div>
   </md-toolbar>
  
   <md-toolbar id="toolbar1"  layout="row" ng-show="!isToolbar">
 
-<div class="md-toolbar-tools" layout-align="center center">
-
-  <md-input-container>
-      <md-icon md-svg-icon="backarrow_black" ng-click="isToolbar=true"> </md-icon>
-      <input type="text" aria-label="Custom2">
+<div class="md-toolbar-tools">
+<div style="padding:0px 0px 0px 160px;"></div>
+  <md-input-container style="height: 50px;width:650px;">
+      <md-icon md-svg-icon="backarrow_black" ng-click="isToolbar=true" style="height:28px;width:28px;top: 13px;"> </md-icon>
+      <input style="height: 50px;width:650px;"type="text" aria-label="Custom2">
     </md-input-container>
  
  </div> 
@@ -188,7 +500,7 @@
  
 
 
-
+</div>
   </div>
  </div> 
  
