@@ -14,18 +14,25 @@
 padding:0px 0px 0px 50px !important;
 }
 }
-@media only screen and (max-width:600px) 
+@media only screen and (max-width:500px) 
 {
 #find
 {
-  width:300px !important;
+  width:40px !important;
+}
+  }
+@media only screen and (max-width:900px) 
+{
+#find
+{
+  width:150px !important;
 }
   }
 
 @media only screen and (max-width:750px) 
 {
 #hover {
-    width: 55px !important;
+    width: 40px !important;
     height: 35px !important;
     }
   }
@@ -318,7 +325,7 @@ md-backdrop.md-opaque {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    position: absolute;
+    position:fixed;
     z-index: 2;
     font-size: 13px;
     min-height: 10px;
@@ -326,9 +333,11 @@ md-backdrop.md-opaque {
     width: 100%;
     left:0px;
     top:0px;
-     max-height: 60px
-    transition: all .5s cubic-bezier(.35,0,.25,1);
-    transition-property: background-color,fill,color;te;
+     max-height: 60px;
+     transform: translate3d(0,0,0) !important;
+       transition-duration: 700ms !important;
+   
+    transition-property: background-color,fill,color;
 }
 
  #toolbarnew {
@@ -349,7 +358,7 @@ md-backdrop.md-opaque {
     left:0px;
     top:0px;
      max-height: 60px
-    transition: all .5s cubic-bezier(.35,0,.25,1);
+transition: all .5s cubic-bezier(.35,0,.25,1);
     transition-property: background-color,fill,color;
 }
 
