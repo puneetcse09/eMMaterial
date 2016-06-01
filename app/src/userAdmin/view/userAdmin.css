@@ -1,16 +1,32 @@
-@media only screen and (max-width:750px) 
+@media only screen and (max-width:800px) 
 {
-  md-icon{
-   padding: 0px  !important;
+  #toolbarIcon{
+   padding:0px  !important;
        margin: 0px !important;
-           width:17px !important;
+       height:24px !important;
+           width:24px !important;
 }
 }
+@media only screen and (max-width:600px) 
+{
+#newtoolbarrow
+{
+padding:0px 0px 0px 50px !important;
+}
+}
+@media only screen and (max-width:600px) 
+{
+#find
+{
+  width:300px !important;
+}
+  }
+
 @media only screen and (max-width:750px) 
 {
 #hover {
-    width: 30px !important;
-    height: 30px !important;
+    width: 55px !important;
+    height: 35px !important;
     }
   }
 @media only screen and (max-width:750px) 
@@ -19,7 +35,7 @@
         top:30% !important;
     }
   }
-
+  
 .chat-status-aval {
       box-shadow: 0 0 0 1px #1ec01e;
     background: #1ec01e;

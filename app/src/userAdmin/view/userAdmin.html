@@ -7,7 +7,7 @@
     <div id="area">
  
   	 <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" id="font">
-    
+   
       <md-toolbar layout="row" id="userinfo">
        
           <div id="userprofile" style="background-image:url(/assets/images/profile-menu.png);">
@@ -98,18 +98,19 @@
     </div>
 </b>
    </div>
+    
 
     </md-sidenav>
   
     <md-sidenav class="md-sidenav-right md-whiteframe-4dp " md-component-id="right">
      
       <div ng-controller="RightCtrl" >
-        <div layout="row" style="padding:20px 0px 0px 0px;">
+        <div layout="row" style="padding:40px 0px 0px 0px;">
        
-<md-icon style="padding:25px 0px 0px 10px;margin:0px;height: 25px;width:25px;" md-svg-icon="search_black"> 
+<md-icon style="margin:10px;height: 25px;width:25px;" md-svg-icon="search_black"> 
                 </md-icon>
-<md-input-container style="margin:15px;">
- <input name="search" ng-model="search" required size="30" placeholder="Search">
+<md-input-container style="margin:2px" >
+ <input name="search" placeholder="Search"ng-model="search" required size="35" md-autofocus>
  </md-input-container>
     
               </div>
@@ -210,7 +211,7 @@ Busy
  
                 <a href  id="hover"  aria-label="Custom" id="menuicon"  ng-click="toggleLeft()">
       <span>
-                <md-icon md-svg-icon="menu_white"> </md-icon>
+                <md-icon id="toolbarIcon"md-svg-icon="menu_white"> </md-icon>
                 </span>
                 </a>
               </span>
@@ -224,7 +225,7 @@ Busy
              <div class="row">
               <a href id="hover">
           <span>
-                <md-icon md-svg-icon="search_white" ng-click="isToolbar=false"> 
+                <md-icon id="toolbarIcon" md-svg-icon="search_white" ng-click="isToolbar=false"> 
                 </md-icon>
               </span>
               </a>
@@ -233,7 +234,7 @@ Busy
     <md-menu md-offset="0 35" md-position-mode="target-right target" >
           <a href  id="hover" aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
        <span>
-                <md-icon md-svg-icon="email_white"> 
+                <md-icon id="toolbarIcon" md-svg-icon="email_white"> 
                 </md-icon>
                 <div class="tmn-counts">6</div>
               </span>
@@ -319,7 +320,7 @@ Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue 
     <md-menu md-offset="0 35" md-position-mode="target-right target" >
           <a href  id="hover" aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
       <span>
-                <md-icon md-svg-icon="notifi_white"> 
+                <md-icon id="toolbarIcon" md-svg-icon="notifi_white"> 
                 </md-icon>
                  <div class="tmn-counts">9</div>
               </span>
@@ -405,7 +406,7 @@ Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue 
     <md-menu md-offset="0 35" md-position-mode="target-right target" >
           <a href  id="hover" aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
        <span>
-                <md-icon md-svg-icon="line_white"> 
+                <md-icon id="toolbarIcon" md-svg-icon="line_white"> 
                 </md-icon>
                  <div class="tmn-counts">2</div>
               </span>
@@ -465,7 +466,7 @@ Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue 
     <md-menu md-offset="0 35" md-position-mode="target-right target" >
           <a href  id="hover"  aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
       <span>
-                <md-icon md-svg-icon="dots_white"> 
+                <md-icon id="toolbarIcon" md-svg-icon="dots_white"> 
                 </md-icon>
               </span>
           </a>
@@ -512,7 +513,7 @@ Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue 
 
   <a href id="hover"  id="icon" aria-label="Custom1" ng-click="toggleRight()">
           <span>
-                <md-icon md-svg-icon="comment_white"> 
+                <md-icon id="toolbarIcon" md-svg-icon="comment_white"> 
                 </md-icon>
               </span>
           </a>
@@ -522,16 +523,18 @@ Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue 
   <md-toolbar id="toolbar1"  layout="row" ng-show="!isToolbar">
 
 <div class="md-toolbar-tools">
-<div layout="row"style="padding:0px 0px 0px 150px;">
+<div layout="row" id="newtoolbarrow"style="padding:0px 0px 0px 150px;">
   <a href="" id="hover1" aria-label="Cust" >
     <span>
       <md-icon md-svg-icon="backarrow_black" ng-click="isToolbar=true" style="height:28px;width:28px;"> </md-icon></span>
       </a>
-  <md-input-container style="height: 50px;width:650px;">
-  
-      <input style="height: 50px;width:650px;"type="text" aria-label="Custom2">
+       <form>
+  <md-input-container style="height: 50px;width:650px;" >
+
+      <input placeholder="" id="find"style="height: 50px;width:650px;" type="text" ng-model="find" md-autofocus/>
     
     </md-input-container>
+     </form>
  </div>
  </div> 
  </md-toolbar> 
@@ -540,6 +543,7 @@ Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue 
 
 </div>
   </div>
+ 
  </div> 
  
 
