@@ -1,3 +1,17 @@
+@media only screen and (max-width:500px) 
+{
+  .md-sidenav-right, md-sidenav {
+     height: 75% !important;
+     z-index: 900 !important;
+}
+}
+@media only screen and (max-width:500px) 
+{
+  .md-sidenav-left, md-sidenav {
+     height: 75% !important;
+     z-index: 900 !important;
+}
+}
 @media only screen and (max-width:800px) 
 {
   #toolbarIcon{
@@ -317,6 +331,7 @@ md-backdrop.md-opaque {
         font-size: 13px;
     }
 #toolbar1 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
   background:white;
     box-sizing: border-box;
     display: -webkit-flex;

@@ -1,11 +1,18 @@
 <style>
-@media only screen and (max-width:250px){
+@media only screen and (max-width:250px)
+{
 #but {
    
     min-width: 55px;
    
-   }}
+   }
+}
 
+#registerTooltip
+{
+    left:850px !important;
+    right:10px !important;
+}
 #but {
     border-radius: 3px;
     box-sizing: border-box;
@@ -60,10 +67,11 @@ ng-init="nv.load()">
         <span flex></span>
         <span flex></span>
         <md-button id="but" ng-click="gotoLoginHome()">Login
-         <md-tooltip>Click to login</md-tooltip>
+         <md-tooltip>Click to Login</md-tooltip>
         </md-button>
         <md-button id="but" ng-click="gotoSchoolSignup()">Register
-          <md-tooltip>Click to register school details</md-tooltip>
+          <md-tooltip id="registerTooltip"style="left:800px;right:10px" >Click to Register
+          School Details</md-tooltip>
         </md-button>
      </div>
    </md-toolbar>

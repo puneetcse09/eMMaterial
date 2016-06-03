@@ -3,10 +3,17 @@
 {
  md-bottom-sheet{
 top:90% !important;
-      
+  }    
 }
-
-  }
+@media only screen and (max-width:400px) and (max-height:500px)
+ {
+      #showhide{
+        display: block;
+        overflow-x : hidden;
+        position:fixed;
+      }
+    }
+  
 footer {
 
       width: 97%;
@@ -39,7 +46,7 @@ box-shadow: none;
 
 <div ng-controller="addFooterCtrl as nv" id="footer"
 ng-init="nv.load()">
-<md-bottom-sheet >
+<md-bottom-sheet id="showhide">
     <footer>
        <md-card id="row"layout="row" layout-align="center center" >
         <label id="label">
