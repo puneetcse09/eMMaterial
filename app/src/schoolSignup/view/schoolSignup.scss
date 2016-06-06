@@ -1,4 +1,4 @@
-
+$bcg-clr: skyblue;
 
 .md-padding {
       padding: 10px 10px 0px 11px ;
@@ -169,7 +169,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    background: skyblue;
+    background: $bcg-clr;
     content: "";
     z-index: 0;
 }
