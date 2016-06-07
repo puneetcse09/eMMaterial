@@ -25,6 +25,7 @@
     };    
             $scope.isToolbar=true;
             $scope.drop =true;
+              $scope.myColor ='#3399ff';
            $scope.name = 'John';
     	    $scope.toggleLeft = buildDelayedToggler('left');
     	    $scope.toggleRight = buildToggler('right');
@@ -49,7 +50,9 @@
           $scope.gotoHome = function (){
           $state.go('emHome');
              };
-    	   
+    	$scope.changeColor = function (colors){
+           $scope.myColor =colors;
+             };   
     
     function debounce(func, wait, context) {
       var timer;

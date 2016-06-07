@@ -40,7 +40,11 @@ body {
   max-height: 60px;
   transform: translate3d(0, 0, 0) !important;
   transition-duration: 700ms !important;
-  transition-property: background-color,fill,color; }
+  transition-property: background-color,fill,color; 
+}
+#toolbarnew {
+
+  background: #3399ff; }
 
 @media only screen and (max-width: 500px) {
   .md-sidenav-right, md-sidenav {
@@ -278,8 +282,7 @@ md-backdrop.md-opaque {
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
   background: white; }
 
-#toolbarnew {
-  background: #3399ff; }
+
 
 md-content {
   height: 75%; }

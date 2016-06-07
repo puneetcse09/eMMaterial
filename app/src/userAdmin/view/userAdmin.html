@@ -3,7 +3,7 @@
 	ng-controller="userAdminCtrl as ul" class="md-whiteframe-z2"
 	ng-init="ul.load()">
 
-	 <div class="login-content ng-scope" style="width:100%;height:100%">
+	 <div class="login-content ng-scope" style="width:100%;height:100%" >
    <md-content flex-xs flex-gt-xs="60" class="md-padding" layout-xs="column" layout="row" style="font-family: roboto;margin-bottom:2%;margin-top:6%;margin-left:23%;
             box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
             font-size: 13px;
@@ -12,6 +12,7 @@
               <md-card>
               <md-content>
               <label>Welcome</label></md-card></div> 
+              
         </md-content>
     <div id="area">
  
@@ -136,7 +137,7 @@
 <md-icon style="margin:10px;height: 25px;width:25px;" md-svg-icon="search_black"> 
                 </md-icon>
 <md-input-container style="margin:2px" >
- <input name="search" placeholder="Search"ng-model="search" required size="35" md-autofocus>
+ <input name="search" placeholder="Search"ng-model="search" required size="30" md-autofocus>
  </md-input-container>
     
               </div>
@@ -232,7 +233,7 @@ Busy
       </div>
       </div>
     </md-sidenav>
-    <md-toolbar id="toolbarnew" layout="row" ng-show="isToolbar">
+    <md-toolbar id="toolbarnew" ng-style="{'background-color':myColor}" layout="row" ng-show="isToolbar">
 <div class="md-toolbar-tools" >
  
                 <a href  id="hover"  aria-label="Custom" id="menuicon"  ng-click="toggleLeft()">
@@ -241,7 +242,7 @@ Busy
                 </span>
                 </a>
               </span>
-          </md-button>
+        
 <div class="md-media-sm card-media">
   <img src="assets/images/em1.png" class="md-card-image"
             alt="user avatar" ng-click="gotoHome()" > 
@@ -500,13 +501,16 @@ Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue 
           <div class="dropdown-menu md-whiteframe-z1">
              <div style="font-size: 13px;">
              <div layout="row" layout-align="center center" style="padding:20px 0px 20px 0px">
-    <span class="ss-skin bgm-lightblue" ></span>
-    <span class="ss-skin bgm-bluegray" ></span>
-    <span class="ss-skin bgm-cyan" ></span>
-    <span class="ss-skin bgm-teal" ></span>
-    <span class="ss-skin bgm-green" ></span>
-    <span class="ss-skin bgm-orange" ></span>
+           
+     <span class="ss-skin" style="background:blue" ng-click="changeColor('blue')"></span>
+         
+     <span class="ss-skin"style="background:red" ng-click="changeColor('red')"></span>
+    <span class="ss-skin "style="background:cyan" ng-click="changeColor('cyan')"></span>
+    <span class="ss-skin "style="background:teal" ng-click="changeColor('teal')"></span>
+    <span class="ss-skin"style="background:green" ng-click="changeColor('green')"></span>
+    <span class="ss-skin "style="background:orange"ng-click="changeColor('orange')"></span>
        </div>
+        
       <div layout="row">
 <md-icon md-svg-icon="toggle_black" style="padding: 13px 13px 0px 25px;margin: 0px;height: 18px;width: 18px;"> 
                 </md-icon>
