@@ -1,5 +1,5 @@
  @import 'body';
-
+ @import 'green';
 #chat{
 position: relative;
     width: 7px;
@@ -40,8 +40,9 @@ position: relative;
     transition-property: background-color,fill,color;
     }
 #toolbarnew {
+  
  @extend #toolbarstyle;
-     background:#3399ff;
+ 
    
 }
 

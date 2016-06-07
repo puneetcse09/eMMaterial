@@ -4,6 +4,9 @@ body {
   font-family: sans-serif;
   font-size: 13px; }
 
+#toolbarnew {
+  background: green !important; }
+
 #chat, .chat-status-aval, .chat-status-busy {
   position: relative;
   width: 7px;
@@ -21,7 +24,7 @@ body {
   font-size: 13px;
   background-size: 100%; }
 
-#toolbarstyle, #toolbar1, #toolbarnew {
+#toolbarstyle, #toolbarnew, #toolbar1 {
   box-sizing: border-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -40,11 +43,7 @@ body {
   max-height: 60px;
   transform: translate3d(0, 0, 0) !important;
   transition-duration: 700ms !important;
-  transition-property: background-color,fill,color; 
-}
-#toolbarnew {
-
-  background: #3399ff; }
+  transition-property: background-color,fill,color; }
 
 @media only screen and (max-width: 500px) {
   .md-sidenav-right, md-sidenav {
@@ -281,8 +280,6 @@ md-backdrop.md-opaque {
 #toolbar1 {
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
   background: white; }
-
-
 
 md-content {
   height: 75%; }
