@@ -1,3 +1,5 @@
+@import 'color';
+
 @media only screen and (max-width:700px)
 {
     .lc-block:not(.lcb-alt) 
@@ -40,13 +42,13 @@ md-checkbox ._md-label {
 #reg {
     border-radius: 15px;
 
-    color: #fff;
+    color: $white;
     display: inline-block;
     
     margin:10px 10px 10px 33px;
     line-height: 23px;
     min-height: 16px;
-    background:#ff9800;
+    background: $prt-orange;
    font-size: 13px;
     min-width: 16px;
    
@@ -63,7 +65,7 @@ md-checkbox ._md-label {
     margin: 6px 8px;
     line-height: 23px;
     min-height: 16px;
-    background:#ff9800;
+    background: $prt-orange;
    font-size: 13px;
     min-width: 16px;
   
@@ -105,7 +107,7 @@ body {
     position: relative;
 }
 a:not(.md-button) {
-    color: black;
+    color: $black;
 }
 
 body {
@@ -130,7 +132,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    background: skyblue;
+    background: $bcg-clr;
     content: "";
     z-index: 0;
 }
@@ -142,7 +144,7 @@ body {
     bottom: 90px;
     left: auto;
     position: absolute;
-        background-color: #f44336;
+        background-color: $prt-red;
 }
 
 

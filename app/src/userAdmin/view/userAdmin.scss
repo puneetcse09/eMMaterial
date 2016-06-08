@@ -1,4 +1,7 @@
+ @import 'color';
+
  @import 'body';
+
  @import 'green';
 #chat{
 position: relative;
@@ -107,12 +110,12 @@ padding:0px 0px 0px 50px !important;
  
 .chat-status-aval {
       box-shadow: 0 0 0 1px #1ec01e;
-    background: #1ec01e;
+    background: $str-green;
     @extend #chat;
 }
 .chat-status-busy {
   box-shadow: 0 0 0 1px #ffa500;
-    background: #ffa500;
+    background: $pure-orange;
     @extend #chat;
 }
   .leftsidenav:hover,.leftsidenav:focus {
@@ -143,7 +146,7 @@ padding:0px 0px 0px 50px !important;
     line-height: 18px;
     color: $white;
     text-align: center;
-    background-color: #2196f3;
+    background-color: $vivid-blue;
 transition: width 0.6s ease;
 }
  .tmn-counts {
@@ -198,7 +201,8 @@ transition: width 0.6s ease;
 #para
 {
   font-size: 12px;
-    color: #A9A9A9;overflow: hidden;
+    color: $gray ;
+    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     display: block;
@@ -254,7 +258,7 @@ a:hover,a:focus {
 }
   a:not(.md-button) {
 
-     color:#4C4C4C !important;
+     color:$dark-grey !important;
 
 }
 a:-webkit-any-link {
