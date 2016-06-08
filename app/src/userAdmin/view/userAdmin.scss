@@ -117,7 +117,7 @@ padding:0px 0px 0px 50px !important;
 }
   .leftsidenav:hover,.leftsidenav:focus {
    background-color: rgba(0, 0, 0, 0) !important;
-    color:black !important;
+    color: $black !important;
     
 }
   .ss-skin {
@@ -141,7 +141,7 @@ padding:0px 0px 0px 50px !important;
     height: 100%;
     font-size: 12px;
     line-height: 18px;
-    color: #ffffff;
+    color: $white;
     text-align: center;
     background-color: #2196f3;
 transition: width 0.6s ease;
@@ -149,7 +149,7 @@ transition: width 0.6s ease;
  .tmn-counts {
     position: absolute;
     font-style: normal;
-    background: #f44336;
+    background: $prt-red;
     padding: 1px 5px;
     border-radius: 2px;
     right: 7px;
@@ -213,7 +213,7 @@ top:25px;
   height:32px;
       text-decoration: none;
  
-  color: #fff;
+  color: $white;
     display: block;
     text-align: center;
     z-index: 1;
@@ -226,7 +226,7 @@ top:25px;
   height:35px;
       text-decoration: none;
   -webkit-font-smoothing: antialiased;
-  color: #fff;
+  color: $white;
     display: block;
     text-align: center;
     z-index: 1;
@@ -267,7 +267,7 @@ a:-webkit-any-link {
 {
       background: rgba(0, 0, 0, 0.37);
         padding: 4px;
-    color: #fff;
+    color: $white;
     margin-top: 23px;
     position: relative;
 }
@@ -292,7 +292,7 @@ md-backdrop.md-opaque {
 }
 #userlist {
      padding: 10px;
-     color:black;
+     color: $black;
 }       
 #icon
 {
@@ -316,7 +316,7 @@ md-backdrop.md-opaque {
   padding: 40px;
   opacity: 0;
   overflow: hidden;
-  background-color: #fff;
+  background-color: $white;
   list-style: none;
   transition: min-width 0.2s ease-in-out, left 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
@@ -345,7 +345,7 @@ md-backdrop.md-opaque {
     position: absolute;
     top: 0;
     left: 0;
-    background: skyblue;
+    background: $bcg-clr;
     content: "";
     z-index: 0;
 }

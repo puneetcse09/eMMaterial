@@ -1,4 +1,4 @@
-$bcg-clr: skyblue;
+@import 'color';
 
 .md-padding {
       padding: 10px 10px 0px 11px ;
@@ -42,7 +42,7 @@ md-checkbox ._md-icon {
 #textcolor
 {
     
-color:#fff;
+color: $white;
 }
 .card-header:not(.ch-alt)
  {
@@ -54,7 +54,7 @@ color:#fff;
     padding-right: 0px;
 }
  .card-body.card-padding {
- background-color: #fff;
+ background-color: $white;
     padding: 10px 10px;
 }  
      
@@ -127,7 +127,7 @@ body {
     margin: 12px 12px;
     line-height: 200px;
     min-height: 90px;
-    background:#FFFF33;
+    background: $vivid-yellow;
    font-size: 13px;
     min-width: 180px;
    text-transform: capitalize;
@@ -142,7 +142,7 @@ body {
     margin: 12px 12px;
     line-height: 200px;
     min-height: 60px;
-    background:#00CC66;
+    background: $lime-green;
    font-size: 13px;
     min-width: 200px;
    text-transform: capitalize;
@@ -157,7 +157,7 @@ body {
     margin: 12px 12px;
     line-height: 200px;
     min-height: 60px;
-    background:#9966CC;
+    background: $mdr-violet;
    font-size: 13px;
     min-width: 200px;
    text-transform: capitalize;
