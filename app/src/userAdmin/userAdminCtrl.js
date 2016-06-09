@@ -23,39 +23,8 @@
       );
       originatorEv = null;
     };    
-     $scope.products = [
-    {
-        'name' : 'Xbox',
-        'clearance' : true,
-        'price' : 49.99,
-    },
-    {
-        'name' : 'Xbox 360',
-        'clearance' : false,
-        'salesStatus' : 'old',
-        'price' : 99.99,
-    },
-    {
-        'name' : 'Xbox One',
-        'salesStatus' : 'new',
-        'price' : 399.99,
-    },
-    {
-        'name' : 'PS2',
-        'clearance' : true,
-        'price' : 49.99,
-    },
-    {
-        'name' : 'PS3',
-        'salesStatus' : 'old',
-        'price' : 99.99,
-    },
-    {
-        'name' : 'PS4',
-        'salesStatus' : 'new',
-        'price' : 399.99,
-    }
-  ];
+   
+   
             $scope.isToolbar=true;
             $scope.drop =true;
               $scope.myColor ='#3399ff';

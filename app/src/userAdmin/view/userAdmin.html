@@ -12,9 +12,7 @@
               <md-card>
               <md-content>
               <label>Welcome</label></md-card></div> 
-              <ul>
-    <li ng-class="{clearance: item.clearance, new: item.salesStatus === 'new'}" ng-repeat="item in products">{{item.name}} &mdash; {{item.price}}</li>
-  </ul>
+        
         </md-content>
     <div id="area">
  
@@ -504,7 +502,7 @@ Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue 
              <div style="font-size: 13px;">
              <div layout="row" layout-align="center center" style="padding:20px 0px 20px 0px">
            
-     <span class="ss-skin" id="bluetoolbar" ng-click="changeColor('blue')"></span>
+     <span class="ss-skin" style="background:blue" ng-click="changeColor('blue')"></span>
          
      <span class="ss-skin"style="background:red" ng-click="changeColor('red')"></span>
     <span class="ss-skin "style="background:cyan" ng-click="changeColor('cyan')"></span>

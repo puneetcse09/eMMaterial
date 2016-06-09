@@ -76,13 +76,15 @@ position: relative;
      height: 75% !important;
      z-index: 900 !important;
 }
+
 }
 @media only screen and (max-width:500px) 
 {
-  .md-sidenav-left, md-sidenav {
+.md-sidenav-left, md-sidenav {
      height: 75% !important;
      z-index: 900 !important;
 }
+  
 }
 @media only screen and (max-width:800px) 
 {
