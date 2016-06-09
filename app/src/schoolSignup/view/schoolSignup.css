@@ -33,7 +33,7 @@ md-checkbox ._md-icon {
   width: 18px; }
 
 #textcolor {
-  color: #fff; }
+  color: #ffffff; }
 
 .card-header:not(.ch-alt) {
   padding: 13px 13px; }
@@ -44,7 +44,7 @@ md-checkbox ._md-icon {
   padding-right: 0px; }
 
 .card-body.card-padding {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 10px 10px; }
 
 md-icon {
@@ -104,7 +104,7 @@ body {
   margin: 12px 12px;
   line-height: 200px;
   min-height: 90px;
-  background: #FFFF33;
+  background: #ffff33;
   font-size: 13px;
   min-width: 180px;
   text-transform: capitalize; }
@@ -116,7 +116,7 @@ body {
   margin: 12px 12px;
   line-height: 200px;
   min-height: 60px;
-  background: #00CC66;
+  background: #00cc66;
   font-size: 13px;
   min-width: 200px;
   text-transform: capitalize; }
@@ -128,7 +128,7 @@ body {
   margin: 12px 12px;
   line-height: 200px;
   min-height: 60px;
-  background: #9966CC;
+  background: #9966cc;
   font-size: 13px;
   min-width: 200px;
   text-transform: capitalize; }
