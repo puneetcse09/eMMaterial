@@ -1,3 +1,13 @@
+.login-content:before {
+  height: 53%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: skyblue;
+  content: "";
+  z-index: 0; }
+
 body {
   line-height: 1.42857143;
   font-weight: 500;
@@ -5,7 +15,7 @@ body {
   font-size: 13px; }
 
 #toolbarnew {
-  background: green !important; }
+  background: green; }
 
 #chat, .chat-status-aval, .chat-status-busy {
   position: relative;
@@ -190,10 +200,10 @@ a:hover, a:focus {
   background-color: rgba(0, 0, 0, 0.14) !important;
   -webkit-tap-highlight-color: transparent !important; }
 
-md-input-container .md-input {
+#md-input-container1 .md-input {
   border-color: transparent; }
 
-md-input-container .md-errors-spacer {
+#md-input-container1 .md-errors-spacer {
   min-height: 20px; }
 
 .leftsidenav {

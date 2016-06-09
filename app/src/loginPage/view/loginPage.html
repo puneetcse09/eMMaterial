@@ -8,7 +8,7 @@
           <form id="loginForm">
             <div layout="column">
               <div layout="row">
-          		  <span><md-icon md-svg-icon="person_black"> </md-icon></span>
+          		  <span><md-icon  id="icons"md-svg-icon="person_black"> </md-icon></span>
                   <md-input-container>
 				
   			             <input name="userName" ng-model="userName" required size="45" placeholder="UserName">
@@ -22,7 +22,7 @@
 		           </div> 
 	             <div layout="row" >
     	           <span>
-                    <md-icon md-svg-icon="access_black"> 
+                    <md-icon id="icons" md-svg-icon="access_black"> 
                     </md-icon>
                   </span>	
 	               <md-input-container>
@@ -39,10 +39,10 @@
     	             <span ng-show="error">{{error}}</span>
     	         </div>
     	         <div layout="row"layout-align="start center">
-    	             <md-checkbox><div style="color:black">Keep me signed in</div></md-checkbox>
+    	             <md-checkbox id="checkbox1"><div style="color:black">Keep me signed in</div></md-checkbox>
                </div>
              <md-button class="md-fab md-fab-bottom-right" >
-               <md-icon id=arrow md-svg-icon="arrow_white" ng-click="gotoUserAdmin()"><md-tooltip>Click to login</md-tooltip> </md-icon>
+               <md-icon id="arrow" md-svg-icon="arrow_white" ng-click="gotoUserAdmin()"><md-tooltip>Click to login</md-tooltip> </md-icon>
               </md-button>	
        	        <div layout="row" layout-align="start center" >
 	                  <md-button id="reg" ng-click="gotoSchoolSignup()"> Register

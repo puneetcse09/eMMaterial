@@ -1,5 +1,6 @@
+@import 'background';
 @import 'color';
-
+@import 'block';
 @media only screen and (max-width:700px)
 {
     .lc-block:not(.lcb-alt) 
@@ -32,11 +33,11 @@
 }
 }
 
-md-checkbox ._md-icon {
+#checkbox1 ._md-icon {
    
     left: 35px;
     }
-md-checkbox ._md-label {
+#checkbox1 ._md-label {
    margin-left: 60px;
 }
 #reg {
@@ -89,7 +90,7 @@ md-input-container {
     height: 24px;
     width: 24px;
 }
-md-icon {
+#icons  {
     margin: 10px;
     background-repeat: no-repeat no-repeat;
     display: inline-block;

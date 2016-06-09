@@ -12,7 +12,9 @@
               <md-card>
               <md-content>
               <label>Welcome</label></md-card></div> 
-              
+              <ul>
+    <li ng-class="{clearance: item.clearance, new: item.salesStatus === 'new'}" ng-repeat="item in products">{{item.name}} &mdash; {{item.price}}</li>
+  </ul>
         </md-content>
     <div id="area">
  
@@ -136,7 +138,7 @@
        
 <md-icon style="margin:10px;height: 25px;width:25px;" md-svg-icon="search_black"> 
                 </md-icon>
-<md-input-container style="margin:2px" >
+<md-input-container  id="md-input-container1"style="margin:2px" >
  <input name="search" placeholder="Search"ng-model="search" required size="30" md-autofocus>
  </md-input-container>
     
@@ -502,7 +504,7 @@ Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue 
              <div style="font-size: 13px;">
              <div layout="row" layout-align="center center" style="padding:20px 0px 20px 0px">
            
-     <span class="ss-skin" style="background:blue" ng-click="changeColor('blue')"></span>
+     <span class="ss-skin" id="bluetoolbar" ng-click="changeColor('blue')"></span>
          
      <span class="ss-skin"style="background:red" ng-click="changeColor('red')"></span>
     <span class="ss-skin "style="background:cyan" ng-click="changeColor('cyan')"></span>
@@ -558,7 +560,7 @@ Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue 
       <md-icon md-svg-icon="backarrow_black" ng-click="isToolbar=true" style="height:28px;width:28px;"> </md-icon></span>
       </a>
        
-       <md-input-container style="height: 50px;width:650px;" >
+       <md-input-container id="md-input-container1" style="height: 50px;width:650px;" >
 
       <input id="find" name="find"style="height: 50px;width:650px;" type="text" ng-model="find" md-autofocus>
     
