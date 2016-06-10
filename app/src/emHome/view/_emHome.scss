@@ -1,20 +1,26 @@
 @import 'color';
-@media only screen and (max-width:500px)
-{
+$mobile: "(max-width:500px)";
+
+@mixin mobile{
+@media only screen and #{$mobile}{
+ @content;
+}
+}
 #center
 {
-    box-shadow: none;
+    @include mobile{
+   box-shadow: none;
     width: 59% !important;
     height: 250px !important;
 }
 }
-@media only screen and (max-width:500px)
-{
+
 .login-content:before {
-    height: 20%;
-   
+    @include mobile{
+    height: 20%;   
 }
 }
+
 #center
 {
     box-shadow: none;
